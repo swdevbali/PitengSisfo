@@ -1,0 +1,29 @@
+<li><a href="<%=Config.base_url%>index/Anak">Anak</a></li>
+
+<li><a href="<%=Config.base_url%>index/BagianUnitKerja">BagianUnitKerja</a></li>
+
+<li><a href="<%=Config.base_url%>index/Cuti">Cuti</a></li>
+
+<li><a href="<%=Config.base_url%>index/Diklat">Diklat</a></li>
+
+<li><a href="<%=Config.base_url%>index/Jabatan">Jabatan</a></li>
+
+<li><a href="<%=Config.base_url%>index/KursusPenataran">KursusPenataran</a></li>
+
+<li><a href="<%=Config.base_url%>index/Mutasi">Mutasi</a></li>
+
+<li><a href="<%=Config.base_url%>index/NaikPangkat">NaikPangkat</a></li>
+
+<li><a href="<%=Config.base_url%>index/Pegawai">Pegawai</a></li>
+
+<li><a href="<%=Config.base_url%>index/Pendidikan">Pendidikan</a></li>
+
+<li><a href="<%=Config.base_url%>index/Pensiun">Pensiun</a></li>
+
+<li><a href="<%=Config.base_url%>index/Prajabatan">Prajabatan</a></li>
+
+<li><a href="<%=Config.base_url%>index/SuamiIstri">SuamiIstri</a></li>
+
+<li><a href="<%=Config.base_url%>index/SubUnitKerja">SubUnitKerja</a></li>
+
+<li><a href="<%=Config.base_url%>index/UserAccount">UserAccount</a></li>

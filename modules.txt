@@ -1,0 +1,19 @@
+master
+- bagian unit kerja (1 *
+  - sub unit kerja  (2 *
+- user account      (3 *
+
+utama              
+- pegawai               (4 *
+  - anak                (5 *
+  - cuti                (6 *
+  - diklat              (7 *
+  - jabatan             (8 *
+  - kursus_penataran    (9 *
+  - mutasi              (10 *
+  - naik_pangkat        (11 *
+  - pendidikan          (12 *
+  - pensiun             (13 *
+  - prajabatan          (14 *
+  - suami_istri         (15 *
+  

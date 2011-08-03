@@ -1,0 +1,11 @@
+.DS_Store
+*.*~
+*.class
+src/java/recite18th
+build/web/css
+build/web/images
+build/web/WEB-INF
+build/web/js
+build/web/META-INF
+dist/
+build/web/*.*

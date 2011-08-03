@@ -1,0 +1,45 @@
+.page {
+	width:800px;
+	margin:0px auto;
+}
+.content {
+	height:auto;
+	width: 800px;
+	min-height:500px;
+/*
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+*/
+}
+
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: red;}
+
+#rounded-corner { font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif; font-size: 12px; text-align: left; border-collapse: collapse; }
+#rounded-corner thead th.rounded-company { background: rgb(185, 201, 254) url('../images/left.png') no-repeat scroll left -1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#rounded-corner thead th.rounded-q4 { background: rgb(185, 201, 254) url('../images/right.png') no-repeat scroll right -1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#rounded-corner th { padding: 8px; background: rgb(185, 201, 254) none repeat scroll 0% 0%; font-weight: normal; font-size: 13px; color: rgb(0, 51, 153); -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#rounded-corner td { border-top: 1px solid rgb(255, 255, 255); padding: 8px; background: rgb(232, 237, 255) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: rgb(102, 102, 153); }
+#rounded-corner tfoot td.rounded-foot-left { background: rgb(232, 237, 255) url('../images/botleft.png') no-repeat scroll left bottom; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#rounded-corner tfoot td.rounded-foot-right { background: rgb(232, 237, 255) url('../images/botright.png') no-repeat scroll right bottom; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+#rounded-corner tbody tr:hover td { background: rgb(208, 218, 253) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+
+	
+#hor-zebra { margin: 20px; font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif; font-size: 12px; width: 480px; text-align: left; border-collapse: collapse; }
+#hor-zebra th { padding: 10px 8px; font-size: 14px; font-weight: normal; color: rgb(0, 51, 153); }
+#hor-zebra td { padding: 8px; color: rgb(102, 102, 153); }
+#hor-zebra .odd { background: rgb(232, 237, 255) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+
+ul.sidenav { border-top: 1px solid rgb(0, 56, 103); border-bottom: 1px solid rgb(51, 115, 169); margin: 0pt; padding: 0pt; background: rgb(0, 80, 148) none repeat scroll 0% 0%; font-size: 1em; float: left; width: 200px; list-style-type: none; list-style-image: none; list-style-position: outside; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+ul.sidenav li a { border-top: 1px solid rgb(51, 115, 169); border-bottom: 1px solid rgb(0, 56, 103); padding: 10px 10px 10px 35px; background: transparent url('../images/sidenav_a.gif') no-repeat scroll 5px 7px; display: block; color: rgb(255, 255, 255); text-decoration: none; width: 155px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+ul.sidenav li a:hover { border-top: 1px solid rgb(26, 76, 118); background: rgb(0, 56, 103) url('sidenav_a.gif') no-repeat scroll 5px 7px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; }
+ul.sidenav li span { display: none; }
+ul.sidenav li a:hover span { padding: 10px 0pt; display: block; font-size: 0.8em; }
