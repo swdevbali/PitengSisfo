@@ -1,0 +1,5 @@
+This is the #1 release use of Recite18th, which is a NetBean Java Web Project, modified to support custom needed of Recite18th development.
+To use this project, you must also clone the recite18th project located at https://github.com/swdev/Recite18th, and create symbolic link in
+src/java/recite18th pointing to Recite18th/recite18th.
+
+Work is in progress to make the use of Recite18th is much more flexible.
