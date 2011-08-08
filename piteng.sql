@@ -1,7 +1,7 @@
 -- MySQL Administrator dump 1.4
 --
 -- ------------------------------------------------------
--- Server version	5.5.9
+-- Server version	5.1.44
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -38,10 +38,11 @@ CREATE TABLE  `piteng`.`anak` (
   `pendidikan` enum('SD','SMP','SMA','D-I','D-II','D-III','S-1','S-2') COLLATE latin1_general_ci NOT NULL DEFAULT 'SD',
   `pekerjaan` varchar(45) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `status_tunjangan` enum('Dapat','Tidak Dapat') COLLATE latin1_general_ci NOT NULL DEFAULT 'Dapat',
-  PRIMARY KEY (`idanak`) ,
-  KEY `FK_Nip` (`nip`) ,
-  CONSTRAINT `anak_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  PRIMARY KEY (`idanak`),
+  KEY `FK_Nip` (`nip`),
+  KEY `anak_ibfk_1` (`nip`),
+  CONSTRAINT `anak_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `piteng`.`anak`
@@ -49,7 +50,9 @@ CREATE TABLE  `piteng`.`anak` (
 
 /*!40000 ALTER TABLE `anak` DISABLE KEYS */;
 LOCK TABLES `anak` WRITE;
-INSERT INTO `piteng`.`anak` VALUES  (5,'101',1,'oke','Anak Kandung','denpasar','1979-06-27','Pria','SD','-','Dapat');
+INSERT INTO `piteng`.`anak` VALUES  (1,'102',3,'alkautsar','Anak Kandung','','1980-01-01','Pria','SD','','Dapat'),
+ (3,'102',2,'alkahfi','Anak Kandung','','1980-01-01','Pria','SD','','Dapat'),
+ (4,'102',1,'alfath','Anak Kandung','','1980-01-01','Pria','SD','','Dapat');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `anak` ENABLE KEYS */;
 
@@ -60,9 +63,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `piteng`.`bagian_unit_kerja`;
 CREATE TABLE  `piteng`.`bagian_unit_kerja` (
-  `idbagian_unit_kerja` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `bagian_unit_kerja` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idbagian_unit_kerja`) 
+  `kode_bagian_unit_kerja` varchar(10) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `bagian_unit_kerja` varchar(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  PRIMARY KEY (`kode_bagian_unit_kerja`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -71,13 +74,12 @@ CREATE TABLE  `piteng`.`bagian_unit_kerja` (
 
 /*!40000 ALTER TABLE `bagian_unit_kerja` DISABLE KEYS */;
 LOCK TABLES `bagian_unit_kerja` WRITE;
-INSERT INTO `piteng`.`bagian_unit_kerja` VALUES  (1,'Sekretariat'),
- (2,'Bidang Pengadaan dan Pengembangan'),
- (3,'Bidang Mutasi dan Kepangkatan'),
- (4,'Bidang Administrasi dan Kesejahteraan'),
- (5,'Bidang Pendidikan dan Pelatihan'),
- (6,'Unit Pelaksana Teknis'),
- (7,'Kelompok Jabatan Fungsional');
+INSERT INTO `piteng`.`bagian_unit_kerja` VALUES  ('11_1','sebelas'),
+ ('22','dua dua'),
+ ('22_nd','cool!'),
+ ('e3','extra 3'),
+ ('ggg','g3'),
+ ('S','Sekretariat 2');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `bagian_unit_kerja` ENABLE KEYS */;
 
@@ -96,10 +98,11 @@ CREATE TABLE  `piteng`.`cuti` (
   `tgl_awal_cuti` date NOT NULL,
   `tgl_akhir_cuti` date NOT NULL,
   `pejabat_berwenang` varchar(45) COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  PRIMARY KEY (`idcuti`) ,
+  PRIMARY KEY (`idcuti`),
   KEY `Nip` (`nip`),
-  CONSTRAINT `cuti_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  KEY `cuti_ibfk_1` (`nip`),
+  CONSTRAINT `cuti_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `piteng`.`cuti`
@@ -107,6 +110,7 @@ CREATE TABLE  `piteng`.`cuti` (
 
 /*!40000 ALTER TABLE `cuti` DISABLE KEYS */;
 LOCK TABLES `cuti` WRITE;
+INSERT INTO `piteng`.`cuti` VALUES  (1,'102','Cuti Tahunan','','1980-01-01','1980-01-01','1980-01-01','');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `cuti` ENABLE KEYS */;
 
@@ -127,10 +131,11 @@ CREATE TABLE  `piteng`.`diklat` (
   `no_sttpl` varchar(45) NOT NULL DEFAULT '',
   `tgl_sttpl` date NOT NULL,
   `jumlah_jam` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`iddiklat`) ,
-  KEY `FK_pegawai_riwayat_pendidikan_dan_pelatihan_fungsional_1` (`nip`) ,
-  CONSTRAINT `diklat_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`iddiklat`),
+  KEY `FK_pegawai_riwayat_pendidikan_dan_pelatihan_fungsional_1` (`nip`),
+  KEY `diklat_ibfk_1` (`nip`),
+  CONSTRAINT `diklat_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `piteng`.`diklat`
@@ -138,6 +143,7 @@ CREATE TABLE  `piteng`.`diklat` (
 
 /*!40000 ALTER TABLE `diklat` DISABLE KEYS */;
 LOCK TABLES `diklat` WRITE;
+INSERT INTO `piteng`.`diklat` VALUES  (1,'101','apakahx','jogja','','1980-01-01','1980-01-01','','1980-01-01',12);
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `diklat` ENABLE KEYS */;
 
@@ -153,20 +159,25 @@ CREATE TABLE  `piteng`.`jabatan` (
   `nama_jabatan` varchar(45) NOT NULL DEFAULT '',
   `jenis_Jabatan` enum('Struktural','Fungsional Tertentu','Struktural dan Fungsional Tertentu (Rangkap)','Fungsional Umum/Staf') NOT NULL DEFAULT 'Struktural',
   `eselon` varchar(45) NOT NULL DEFAULT '',
-  `idunit_kerja` int(10) unsigned NOT NULL,
-  `idsub_unit_kerja` int(10) unsigned NOT NULL,
+  `unit_kerja` enum('Badan Kepegawaian') NOT NULL DEFAULT 'Badan Kepegawaian',
+  `kode_sub_unit_kerja` varchar(10) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `tmt_jabatan` date NOT NULL,
   `no_sk_jabatan` varchar(45) NOT NULL DEFAULT '',
   `tgl_sk_jabatan` date NOT NULL,
   `no_surat_pelantikan` varchar(45) NOT NULL DEFAULT '',
   `tgl_surat_pelantikan` date NOT NULL,
   `pejabat_berwenang` varchar(45) NOT NULL DEFAULT '',
-  PRIMARY KEY (`idjabatan`) ,
-  KEY `FK_Nip` (`nip`) ,
-  KEY `FK_Idunit_kerja` (`idunit_kerja`) ,
-  KEY `FK_Idsub_unit_kerja` (`idsub_unit_kerja`) ,
-  CONSTRAINT `jabatan_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `kode_bagian_unit_kerja` varchar(10) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  PRIMARY KEY (`idjabatan`),
+  KEY `FK_Nip` (`nip`),
+  KEY `FK_Idunit_kerja` (`unit_kerja`),
+  KEY `FK_Idsub_unit_kerja` (`kode_sub_unit_kerja`),
+  KEY `jabatan_ibfk_1` (`nip`),
+  KEY `jabatan_ibfk_3` (`kode_bagian_unit_kerja`),
+  CONSTRAINT `jabatan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `jabatan_ibfk_2` FOREIGN KEY (`kode_sub_unit_kerja`) REFERENCES `sub_unit_kerja` (`kode_sub_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `jabatan_ibfk_3` FOREIGN KEY (`kode_bagian_unit_kerja`) REFERENCES `bagian_unit_kerja` (`kode_bagian_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `piteng`.`jabatan`
@@ -174,6 +185,7 @@ CREATE TABLE  `piteng`.`jabatan` (
 
 /*!40000 ALTER TABLE `jabatan` DISABLE KEYS */;
 LOCK TABLES `jabatan` WRITE;
+INSERT INTO `piteng`.`jabatan` VALUES  (1,'102','apa','Struktural','i','Badan Kepegawaian','S1','1980-01-01','1','1980-01-01','1','1980-01-01','1','22');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `jabatan` ENABLE KEYS */;
 
@@ -196,9 +208,10 @@ CREATE TABLE  `piteng`.`kursus_penataran` (
   `jumlah_jam` int(10) unsigned NOT NULL,
   `jenis` enum('Kursus','Penataran') NOT NULL DEFAULT 'Kursus',
   PRIMARY KEY (`idkursus_penataran`),
-  KEY `FK_Nip` (`nip`) ,
-  CONSTRAINT `kursus_penataran_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `FK_Nip` (`nip`),
+  KEY `kursus_penataran_ibfk_1` (`nip`),
+  CONSTRAINT `kursus_penataran_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `piteng`.`kursus_penataran`
@@ -206,6 +219,7 @@ CREATE TABLE  `piteng`.`kursus_penataran` (
 
 /*!40000 ALTER TABLE `kursus_penataran` DISABLE KEYS */;
 LOCK TABLES `kursus_penataran` WRITE;
+INSERT INTO `piteng`.`kursus_penataran` VALUES  (1,'102','kkk','kk','k','1980-01-01','1980-01-01','','1980-01-01',90,'Penataran');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `kursus_penataran` ENABLE KEYS */;
 
@@ -225,10 +239,11 @@ CREATE TABLE  `piteng`.`mutasi` (
   `pejabat_berwenang` varchar(25) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `tempat_mutasi` varchar(45) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `tgl_mutasi` date NOT NULL,
-  PRIMARY KEY (`idmutasi`) ,
-  KEY `FK_Nip` (`nip`) ,
-  CONSTRAINT `mutasi_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  PRIMARY KEY (`idmutasi`),
+  KEY `FK_Nip` (`nip`),
+  KEY `mutasi_ibfk_1` (`nip`),
+  CONSTRAINT `mutasi_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `piteng`.`mutasi`
@@ -236,6 +251,7 @@ CREATE TABLE  `piteng`.`mutasi` (
 
 /*!40000 ALTER TABLE `mutasi` DISABLE KEYS */;
 LOCK TABLES `mutasi` WRITE;
+INSERT INTO `piteng`.`mutasi` VALUES  (1,'102','jjjj','1980-01-01','','','','','1980-01-01');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `mutasi` ENABLE KEYS */;
 
@@ -256,10 +272,10 @@ CREATE TABLE  `piteng`.`naik_pangkat` (
   `tgl_sk_pangkat` date NOT NULL,
   `pejabat_berwenang` varchar(45) NOT NULL DEFAULT '',
   `nama_pangkat` varchar(45) NOT NULL DEFAULT '',
-  PRIMARY KEY (`idpangkat`,`nip`) ,
-  KEY `FK_Nip` (`nip`) ,
-  CONSTRAINT `naik_pangkat_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`idpangkat`),
+  KEY `naik_pangkat_ibfk_1` (`nip`),
+  CONSTRAINT `naik_pangkat_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `piteng`.`naik_pangkat`
@@ -267,6 +283,7 @@ CREATE TABLE  `piteng`.`naik_pangkat` (
 
 /*!40000 ALTER TABLE `naik_pangkat` DISABLE KEYS */;
 LOCK TABLES `naik_pangkat` WRITE;
+INSERT INTO `piteng`.`naik_pangkat` VALUES  (1,'102','Kenaikan Pangkat Pilihan','Menemukan penemuan baru yang bermanfaat bagi negara','1980-01-01',10000,'10101','1980-01-01','eko','apa');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `naik_pangkat` ENABLE KEYS */;
 
@@ -290,23 +307,22 @@ CREATE TABLE  `piteng`.`pegawai` (
   `pendidikan_terakhir` enum('SD','SMP','SMA','D-I','D-II','D-III','S-1','S-2','S-3') COLLATE latin1_general_ci DEFAULT NULL,
   `status_kepegawaian` enum('CPNS','PNS') COLLATE latin1_general_ci DEFAULT NULL,
   `pangkat_golongan_ruang` enum('I/a - Juru Muda','I/b - Juru Muda Tk.I','I/c - Juru','I/d - Juru Tk.I','II/a - Pengatur Muda','II/b - Pengatur Muda Tk.I','II/c - Pengatur','II/d - Pegatur Tk.I','III/a - Penata Muda','III/b - Penata Muda Tk.I','III/c - Penata','III/d - Penata Tk.I','IV/a - Pembina','IV/b - Pembina Tk.I','IV/c - Pembina Utama Muda','IV/d - Pembina Utama Madya','IV/e - Pembina Utama') COLLATE latin1_general_ci DEFAULT NULL,
-  `tmt_pangkat` text COLLATE latin1_general_ci,
+  `tmt_pangkat` date DEFAULT NULL,
   `no_sk` varchar(20) COLLATE latin1_general_ci DEFAULT NULL,
   `tgl_mulai_kerja` date DEFAULT NULL,
   `pejabat_berwenang` varchar(45) COLLATE latin1_general_ci DEFAULT '',
   `unit_kerja` enum('Badan Kepegawaian') COLLATE latin1_general_ci DEFAULT 'Badan Kepegawaian',
-  `idbagian_unit_Kerja` int(10) unsigned NOT NULL,
-  `idsub_unit_kerja` int(10) unsigned DEFAULT NULL,
+  `kode_bagian_unit_kerja` varchar(10) COLLATE latin1_general_ci DEFAULT NULL,
+  `kode_sub_unit_kerja` varchar(10) COLLATE latin1_general_ci DEFAULT NULL,
   `no_ktp` varchar(20) COLLATE latin1_general_ci DEFAULT '',
   `alamat_ktp` text COLLATE latin1_general_ci,
   `alamat_domisili` text COLLATE latin1_general_ci,
   `foto` varchar(50) COLLATE latin1_general_ci DEFAULT '',
-  PRIMARY KEY (`nip`) ,
-  KEY `Idunit_Kerja` (`unit_kerja`),
-  KEY `Idbagian_unit_Kerja` (`idbagian_unit_Kerja`),
-  KEY `idsub_unit_kerja` (`idsub_unit_kerja`),
-  CONSTRAINT `pegawai_ibfk_2` FOREIGN KEY (`Idbagian_unit_Kerja`) REFERENCES `bagian_unit_kerja` (`Idbagian_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `pegawai_ibfk_3` FOREIGN KEY (`idsub_unit_kerja`) REFERENCES `sub_unit_kerja` (`idsub_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`nip`),
+  KEY `peg_kbuk` (`kode_bagian_unit_kerja`),
+  KEY `FK_pegawai_2` (`kode_sub_unit_kerja`),
+  CONSTRAINT `FK_pegawai_1` FOREIGN KEY (`kode_bagian_unit_kerja`) REFERENCES `bagian_unit_kerja` (`kode_bagian_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_pegawai_2` FOREIGN KEY (`kode_sub_unit_kerja`) REFERENCES `sub_unit_kerja` (`kode_sub_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
@@ -315,7 +331,9 @@ CREATE TABLE  `piteng`.`pegawai` (
 
 /*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;
 LOCK TABLES `pegawai` WRITE;
-INSERT INTO `piteng`.`pegawai` VALUES  ('101','',NULL,'Piteng',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','Badan Kepegawaian',1,1,'',NULL,NULL,'');
+INSERT INTO `piteng`.`pegawai` VALUES  ('101','','','Piteng','Jayapura','1980-01-01','Pria','Protestan','B','Belum Kawin','SMA','PNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','22','S1','','','','head down 2.png'),
+ ('102','','','Eko','Denpasar','1980-01-01','Pria','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','22','S1','','','','alfath.png'),
+ ('103','','','Ela','Subang','1980-01-01','Pria','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','e3','S1','','','','bend2.png');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `pegawai` ENABLE KEYS */;
 
@@ -334,10 +352,11 @@ CREATE TABLE  `piteng`.`pendidikan` (
   `jurusan` varchar(45) NOT NULL DEFAULT '',
   `no_ijazah_sttb` varchar(45) NOT NULL DEFAULT '',
   `tgl_ijazah_sttb` date NOT NULL,
-  PRIMARY KEY (`idpendidikan`) ,
-  KEY `FK_Nip` (`nip`) ,
-  CONSTRAINT `pendidikan_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`idpendidikan`),
+  KEY `FK_Nip` (`nip`),
+  KEY `pendidikan_ibfk_1` (`nip`),
+  CONSTRAINT `pendidikan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `piteng`.`pendidikan`
@@ -345,6 +364,7 @@ CREATE TABLE  `piteng`.`pendidikan` (
 
 /*!40000 ALTER TABLE `pendidikan` DISABLE KEYS */;
 LOCK TABLES `pendidikan` WRITE;
+INSERT INTO `piteng`.`pendidikan` VALUES  (1,'102','SD','kkk','k','k','k','1980-01-01');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `pendidikan` ENABLE KEYS */;
 
@@ -359,8 +379,9 @@ CREATE TABLE  `piteng`.`pensiun` (
   `sk_pensiun` varchar(45) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `tmt_pensiun` date NOT NULL,
   `alasan_pensiun` text COLLATE latin1_general_ci NOT NULL,
-  PRIMARY KEY (`nip`) ,
-  CONSTRAINT `pensiun_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`nip`),
+  KEY `pensiun_ibfk_1` (`nip`),
+  CONSTRAINT `pensiun_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
@@ -369,6 +390,7 @@ CREATE TABLE  `piteng`.`pensiun` (
 
 /*!40000 ALTER TABLE `pensiun` DISABLE KEYS */;
 LOCK TABLES `pensiun` WRITE;
+INSERT INTO `piteng`.`pensiun` VALUES  ('102','3','1980-01-01','3');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `pensiun` ENABLE KEYS */;
 
@@ -387,10 +409,11 @@ CREATE TABLE  `piteng`.`prajabatan` (
   `tgl_pelaksanaan` date NOT NULL,
   `no_sttpl` varchar(45) NOT NULL DEFAULT '',
   `tgl_sttpl` date NOT NULL,
-  PRIMARY KEY (`idprajabatan`) ,
-  KEY `FK_Nip` (`nip`) ,
-  CONSTRAINT `prajabatan_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`idprajabatan`),
+  KEY `FK_Nip` (`nip`),
+  KEY `prajabatan_ibfk_1` (`nip`),
+  CONSTRAINT `prajabatan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `piteng`.`prajabatan`
@@ -398,6 +421,7 @@ CREATE TABLE  `piteng`.`prajabatan` (
 
 /*!40000 ALTER TABLE `prajabatan` DISABLE KEYS */;
 LOCK TABLES `prajabatan` WRITE;
+INSERT INTO `piteng`.`prajabatan` VALUES  (1,'102','Diklat Prajabatan Golongan I','iii','ii','1980-01-01','oo','1980-01-01');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `prajabatan` ENABLE KEYS */;
 
@@ -408,19 +432,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `piteng`.`suami_istri`;
 CREATE TABLE  `piteng`.`suami_istri` (
-  `idsuami_Istri` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idsuami_istri` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nip` varchar(18) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `nama_suami_istri` varchar(45) COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `tempat_lahir` int(10) unsigned NOT NULL,
+  `tempat_lahir` varchar(50) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `tgl_lahir` date NOT NULL,
   `status_suami_istri` enum('Suami','Istri') COLLATE latin1_general_ci NOT NULL DEFAULT 'Istri',
   `pekerjaan` enum('PNS','Non PNS') COLLATE latin1_general_ci NOT NULL DEFAULT 'PNS',
   `status_tunjangan` enum('Dapat','Tidak Dapat') COLLATE latin1_general_ci NOT NULL DEFAULT 'Dapat',
   `tgl_menikah` date NOT NULL,
-  PRIMARY KEY (`idsuami_Istri`) ,
-  KEY `FK_Idsuami_sitri` (`nip`) ,
-  CONSTRAINT `suami_istri_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  PRIMARY KEY (`idsuami_istri`),
+  KEY `FK_Idsuami_sitri` (`nip`),
+  KEY `suami_istri_ibfk_1` (`nip`),
+  CONSTRAINT `suami_istri_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4294967295 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `piteng`.`suami_istri`
@@ -428,6 +453,8 @@ CREATE TABLE  `piteng`.`suami_istri` (
 
 /*!40000 ALTER TABLE `suami_istri` DISABLE KEYS */;
 LOCK TABLES `suami_istri` WRITE;
+INSERT INTO `piteng`.`suami_istri` VALUES  (2,'102','ela','subang','1980-01-01','Suami','PNS','Dapat','1980-01-01'),
+ (3,'102','eko','','1980-01-01','Suami','PNS','Dapat','1980-01-01');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `suami_istri` ENABLE KEYS */;
 
@@ -438,13 +465,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `piteng`.`sub_unit_kerja`;
 CREATE TABLE  `piteng`.`sub_unit_kerja` (
-  `idsub_unit_kerja` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `sub_unit_kerja` varchar(45) DEFAULT NULL,
-  `idbagian_unit_kerja` int(11) unsigned DEFAULT NULL,
-  PRIMARY KEY (`idsub_unit_kerja`),
-  KEY `idbagian_unit_kerja` (`idbagian_unit_kerja`),
-  CONSTRAINT `sub_unit_kerja_ibfk_1` FOREIGN KEY (`idbagian_unit_kerja`) REFERENCES `bagian_unit_kerja` (`Idbagian_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `kode_sub_unit_kerja` varchar(10) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `sub_unit_kerja` varchar(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `kode_bagian_unit_kerja` varchar(10) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  PRIMARY KEY (`kode_sub_unit_kerja`),
+  KEY `newfk` (`kode_bagian_unit_kerja`),
+  CONSTRAINT `sub_unit_kerja_ibfk_1` FOREIGN KEY (`kode_bagian_unit_kerja`) REFERENCES `bagian_unit_kerja` (`kode_bagian_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `piteng`.`sub_unit_kerja`
@@ -452,9 +479,7 @@ CREATE TABLE  `piteng`.`sub_unit_kerja` (
 
 /*!40000 ALTER TABLE `sub_unit_kerja` DISABLE KEYS */;
 LOCK TABLES `sub_unit_kerja` WRITE;
-INSERT INTO `piteng`.`sub_unit_kerja` VALUES  (1,'Sub Bagian Umum',1),
- (2,'Sub Bagian Program',1),
- (3,'Sub Bagian Keuangan dan Aset',1);
+INSERT INTO `piteng`.`sub_unit_kerja` VALUES  ('S1','Sekretariat 1','e3');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `sub_unit_kerja` ENABLE KEYS */;
 
@@ -471,8 +496,9 @@ CREATE TABLE  `piteng`.`user_account` (
   `email` varchar(45) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `role` enum('Pegawai','Administrator') COLLATE latin1_general_ci NOT NULL DEFAULT 'Pegawai',
   `username` varchar(45) COLLATE latin1_general_ci DEFAULT NULL,
-  PRIMARY KEY (`nip`) ,
-  CONSTRAINT `user_account_ibfk_1` FOREIGN KEY (`Nip`) REFERENCES `pegawai` (`Nip`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`nip`),
+  KEY `user_account_ibfk_1` (`nip`),
+  CONSTRAINT `user_account_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
@@ -481,7 +507,7 @@ CREATE TABLE  `piteng`.`user_account` (
 
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
 LOCK TABLES `user_account` WRITE;
-INSERT INTO `piteng`.`user_account` VALUES  ('101','Piteng Uropdana','101','piteng@gmail.com','Administrator','piteng');
+INSERT INTO `piteng`.`user_account` VALUES  ('101','piteng','101','','Administrator','piteng');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 

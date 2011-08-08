@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*,recite18th.library.Db,application.config.Config,recite18th.library.Pagination" %><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <% int pagenum = 0; %>
-<a href="<%=Config.base_url%>index/Pegawai/input/-1">Tambah Data</a>
+<a href="<%=Config.base_url%>index/Pegawai/input/-1">Tambah Data</a> | <a href="<%=Config.base_url%>index/Pegawai/print/">Print</a>
 <table width="100%" id="rounded-corner">
 <thead>
   <tr>
