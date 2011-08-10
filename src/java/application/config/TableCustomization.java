@@ -16,8 +16,13 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see http://www.gnu.org/licenses/.
 */
+/* HISTORY
+   August 10, 2011 = Use this to customize iText/PDF report also.
+ */
 package application.config;
 import java.util.Hashtable;
+
+
 
 public class TableCustomization
 {
@@ -27,12 +32,12 @@ public class TableCustomization
         hashTable = new Hashtable();
         
         Hashtable hashPegawai = new Hashtable();
+        hashPegawai.put("columnCount",5);
         hashPegawai.put("nip","NIP");
-        hashPegawai.put("nama_lengkap","Nama Lengkap");
-        hashPegawai.put("nomor_seri_kartu_pegawai","Nomor Seri Kartu Pegawai");
+        hashPegawai.put("no_karpeg","No. Kartu Pegawai");
+        hashPegawai.put("nama_pegawai","Nama");
         hashPegawai.put("tempat_lahir","Tempat Lahir");
-        hashPegawai.put("agama","Agama");
-        hashPegawai.put("idunit_kerja","Unit Kerja");
+        hashPegawai.put("pangkat_golongan_ruang","Pangk/Gol/Ruang");
         hashTable.put("pegawai", hashPegawai);
     }
     public static Hashtable getTable(String tableName)
