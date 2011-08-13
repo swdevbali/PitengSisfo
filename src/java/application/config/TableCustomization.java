@@ -32,13 +32,20 @@ public class TableCustomization
         hashTable = new Hashtable();
         
         Hashtable hashPegawai = new Hashtable();
-        hashPegawai.put("columnCount",5);
+        hashPegawai.put("columnCount",5); //kolom No. tidak dihitung
         hashPegawai.put("nip","NIP");
         hashPegawai.put("no_karpeg","No. Kartu Pegawai");
         hashPegawai.put("nama_pegawai","Nama");
         hashPegawai.put("tempat_lahir","Tempat Lahir");
         hashPegawai.put("pangkat_golongan_ruang","Pangk/Gol/Ruang");
         hashTable.put("pegawai", hashPegawai);
+        
+        Hashtable hashUserAccount = new Hashtable();
+        hashUserAccount.put("columnCount", 3);
+        hashUserAccount.put("nip","NIP");
+        hashUserAccount.put("username","Username");
+        hashUserAccount.put("role","Role");
+        hashTable.put("user_account", hashUserAccount);
     }
     public static Hashtable getTable(String tableName)
     {

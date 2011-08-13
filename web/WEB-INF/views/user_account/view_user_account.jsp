@@ -2,14 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <% int pagenum = 0; %>
 <a href="<%=Config.base_url%>index/UserAccount/input/-1">Tambah Data</a>
+|| <a href="<%=Config.base_url%>index/UserAccount/print">Cetak</a>
 <table width="100%" id="rounded-corner">
 <thead>
   <tr>
   <th scope="col" class="rounded-company">No.</th>
-  <th scope="col" class="rounded-q1">Nip</th>
-  <th scope="col" class="rounded-q1">Name</th>
-  <th scope="col" class="rounded-q1">Password</th>
-  <th scope="col" class="rounded-q1">Email</th>
+  <th scope="col" class="rounded-q1">NIP</th>
   <th scope="col" class="rounded-q1">Role</th>
   <th scope="col" class="rounded-q1">Username</th>
   <th scope="col" class="rounded-q4">Aksi</th>
@@ -26,9 +24,6 @@
     <tr>
       <td>${status.count}</td>
       <td>${item.nip}</td>
-      <td>${item.name}</td>
-      <td>${item.password}</td>
-      <td>${item.email}</td>
       <td>${item.role}</td>
       <td>${item.username}</td>
       <td>

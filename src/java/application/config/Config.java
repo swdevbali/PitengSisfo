@@ -18,7 +18,7 @@ public class Config {
     //public static final String base_path = "D:\\Skripsi\\PitengSisfo\\build\\web";
     public static final String base_path = "/Volumes/Data/ekowibowo/Documents/PitengSisfo/build/web/";
     //public static final String base_path = "E:\\_SWDEV\\GO\\08.PIT\\work\\PitengSisfo\\build\\web";
-    public static final String application_title = "Sistem Informasi Kepegawaian Bantul 2011";
+    public static final String application_title = "Badan Kepegawaian Daerah Pemerintah Kabupaten Bantul - Yogyakarta";
     public static final String production_year = "2011";
     public static final String author = "Piteng";
     public static final String application_context = "/PitengSisfo";
