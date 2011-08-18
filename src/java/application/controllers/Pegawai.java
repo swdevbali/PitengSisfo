@@ -23,4 +23,9 @@ public class Pegawai extends _Pegawai
         request.getSession().setAttribute("pegawai_terpilih",pegawai_terpilih);
         index();
     }
+
+    public void search()
+    {
+        
+    }
 }
