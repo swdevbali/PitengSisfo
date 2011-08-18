@@ -9,3 +9,4 @@ build/web/js
 build/web/META-INF
 dist/
 build/web/*.*
+build/web/upload/*
