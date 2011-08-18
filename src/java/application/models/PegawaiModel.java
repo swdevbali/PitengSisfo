@@ -12,4 +12,24 @@ public class PegawaiModel extends _PegawaiModel
     {
         super();
     }
+    
+    private String bagian_unit_kerja;
+    public String getBagian_unit_kerja()
+    {
+        return bagian_unit_kerja;
+    }
+    public void setBagian_unit_kerja(String bagian_unit_kerja)
+    {
+        this.bagian_unit_kerja = bagian_unit_kerja;
+    }
+
+    private String sub_unit_kerja;
+    public String getSub_unit_kerja()
+    {
+        return sub_unit_kerja;
+    }
+    public void setSub_unit_kerja(String sub_unit_kerja)
+    {
+        this.sub_unit_kerja = sub_unit_kerja;
+    }
 }

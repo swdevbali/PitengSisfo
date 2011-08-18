@@ -5,13 +5,13 @@
 <form action="<%=Config.base_url%>index/Pegawai/search/" method="post">
 Cari berdasarkan 
 <select name="search_criteria">
-<option value="nip">NIP</option>
-<option value="nama_pegawai">Nama</option>
-<option value="pangkat_golongan_ruang">Pangkat/Golongan"</option>
-<option value="kode_bagian_unit_kerja">Bagian Unit Kerja</option>
-<option value="kode_sub_unit_kerja">Sub Unit Kerja</option>
+<option value="nip" <c:if test="${sess_search_criteria=='nip'}">selected="selected"</c:if>>NIP</option>
+<option value="nama_pegawai" <c:if test="${sess_search_criteria=='nama_pegawai'}">selected="selected"</c:if>>Nama</option>
+<option value="pangkat_golongan_ruang" <c:if test="${sess_search_criteria=='pangkat_golongan_ruang'}">selected="selected"</c:if>>Pangkat/Golongan</option>
+<option value="kode_bagian_unit_kerja" <c:if test="${sess_search_criteria=='kode_bagian_unit_kerja'}">selected="selected"</c:if>>Bagian Unit Kerja</option>
+<option value="kode_sub_unit_kerja" <c:if test="${sess_search_criteria=='kode_sub_unit_kerja'}">selected="selected"</c:if>>Sub Unit Kerja</option>
 </select> 
-Nilai <input name="search_value" id="search_value" type="text"/> <input name="search_submit" type="submit" value="Cari"/>
+Nilai <input name="search_value" id="search_value" type="text" value="${sess_search_value}"/> <input name="search_submit" type="submit" value="Cari"/>
 </form>
 <table width="100%" id="rounded-corner">
 <thead>
@@ -20,14 +20,17 @@ Nilai <input name="search_value" id="search_value" type="text"/> <input name="se
   <th scope="col" class="rounded-q1">NIP</th> 
   <th scope="col" class="rounded-q1">Foto</th>
   <th scope="col" class="rounded-q1">Nama</th>
+  <th scope="col" class="rounded-q1">Bagian Unit Kerja</th>
+  <th scope="col" class="rounded-q1">Sub Unit Kerja</th>
   <th scope="col" class="rounded-q1">Tempat Lahir</th>
   <th scope="col" class="rounded-q1">Agama</th>
+  <th scope="col" class="rounded-q1">Pangkat/Gol</th>
   <th scope="col" class="rounded-q4">Aksi</th>
   </tr>
 </thead>
 <tfoot>
   <tr>
-    <td colspan="5" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
+    <td colspan="9" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
     <td class="rounded-foot-right">&nbsp;</td>
   </tr>
 </tfoot>
@@ -38,8 +41,11 @@ Nilai <input name="search_value" id="search_value" type="text"/> <input name="se
       <td>${item.nip}</td>
       <td><img src="<%=Config.base_url%>upload/${item.foto}" width=100 height=100/></td>
       <td>${item.nama_pegawai}</td>
+      <td>${item.bagian_unit_kerja}</td>
+      <td>${item.sub_unit_kerja}</td>
       <td>${item.tempat_lahir}</td>
       <td>${item.agama}</td>
+      <td>${item.pangkat_golongan_ruang}</td>
       <td>
          <a href="<%=Config.base_url%>index/Pegawai/input/${item.nip}">Ubah</a>
          <a href="<%=Config.base_url%>index/Pegawai/delete/${item.nip}" onClick="return confirm('Apakah Anda yakin?');">Hapus</a>
