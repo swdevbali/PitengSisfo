@@ -15,15 +15,12 @@ public class Config {
     public static final String mainPage = "index.jsp";
     public static final String page404 =  "page404.jsp";
     public static final String base_url = "http://localhost:8084/PitengSisfo/";
-    public static final String base_path = "D:\\work\\konsultan_ta\\piteng\\work\\PitengSisfo\\build\\web\\";
+    public static final String base_path = "C:\\Users\\Eko SW\\Documents\\Projects\\ta\\PitengSisfo\\work\\PitengSisfo\\build\\web\\";
     //public static final String base_path = "/Volumes/Data/ekowibowo/Documents/PitengSisfo/build/web/";
     //public static final String base_path = "E:\\_SWDEV\\GO\\08.PIT\\work\\PitengSisfo\\build\\web";
     public static final String application_title = "Badan Kepegawaian Daerah Pemerintah Kabupaten Bantul - Yogyakarta";
     public static final String production_year = "2011";
     public static final String author = "Piteng";
     public static final String application_context = "/PitengSisfo";
-    public static final String path_delimiter = "/"; //*nix
-    //public static final String path_delimiter = "\\"; //*nix
-    
-
+    public static final String path_delimiter = "/";
 }
