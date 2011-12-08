@@ -1,11 +1,18 @@
 /** 
  * 
  */
-
 package application.controllers;
-import recite18th.controller.Controller;
-import application.models.CutiModel;
 
-public class Cuti extends _Cuti
-{
+import application.models.PegawaiModel;
+import recite18th.model.Model;
+
+public class Cuti extends _Cuti {
+
+    @Override
+    public void index() {
+        PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
+        Model model = initModel();
+        sqlViewDataPerPage = "select * from " + model.getTableName() + " where nip='" + pegawaiTerpilih.getNip() + "'";
+        super.index();
+    }
 }
