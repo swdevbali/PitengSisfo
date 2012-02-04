@@ -4,9 +4,8 @@
  */
 
 package application.models;
-import recite18th.model.Model;
-import application.models._PensiunModel;
 import recite18th.library.Db;
+import recite18th.model.Model;
 public class PensiunModel extends _PensiunModel
 {
     public PensiunModel()
@@ -22,5 +21,12 @@ public class PensiunModel extends _PensiunModel
     public String getNama_pegawai()
     {
         return Db.findValue("pegawai","nama_pegawai", "nip='" + nip + "'");
+    }
+    
+    @Override
+    public void overrideDefaultValue(Model model) {
+        PegawaiModel pegawaiTerpilih = (PegawaiModel) session.getAttribute("pegawai_terpilih");
+        PensiunModel pensiunModel = (PensiunModel) model;
+        pensiunModel.setNip(pegawaiTerpilih.getNip());
     }
 }

@@ -60,6 +60,10 @@ ${sk_pensiun_error}
 ${alasan_pensiun_error}
 </td>
 </tr>
+<tr>
+<input name="hidden_idpensiun" type="hidden" id="hidden_idpensiun" value="${model.idpensiun}"/>
+</td>
+</tr>
 <tr class="odd">
 <td>&nbsp;</td>
 <td><input type="submit" name="Submit" value="Simpan"><input name="Button" type="button" id="Submit" value="Batal" onClick="javascript:history.back(-1);"></td>

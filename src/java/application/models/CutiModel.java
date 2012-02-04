@@ -4,9 +4,8 @@
  */
 
 package application.models;
-import recite18th.model.Model;
-import application.models._CutiModel;
 import recite18th.library.Db;
+import recite18th.model.Model;
 public class CutiModel extends _CutiModel
 {
     public CutiModel()
@@ -22,5 +21,13 @@ public class CutiModel extends _CutiModel
     public String getNama_pegawai()
     {
         return Db.findValue("pegawai","nama_pegawai", "nip='" + nip + "'");
+    }
+    
+      
+    @Override
+    public void overrideDefaultValue(Model model) {
+        PegawaiModel pegawaiTerpilih = (PegawaiModel) session.getAttribute("pegawai_terpilih");
+        CutiModel cutiModel = (CutiModel) model;
+        cutiModel.setNip(pegawaiTerpilih.getNip());
     }
 }

@@ -23,4 +23,11 @@ public class SuamiIstriModel extends _SuamiIstriModel
     {
         return Db.findValue("pegawai","nama_pegawai", "nip='" + nip + "'");
     }
+    
+     @Override
+    public void overrideDefaultValue(Model model) {
+        PegawaiModel pegawaiTerpilih = (PegawaiModel) session.getAttribute("pegawai_terpilih");
+        SuamiIstriModel suamiIstriModel = (SuamiIstriModel) model;
+        suamiIstriModel.setNip(pegawaiTerpilih.getNip());
+    }
 }

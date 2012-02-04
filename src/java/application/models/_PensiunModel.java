@@ -12,10 +12,11 @@ public class _PensiunModel extends Model
     public String sk_pensiun;
     public String tmt_pensiun;
     public String alasan_pensiun;
+    public String idpensiun;
     public _PensiunModel()
     {
         tableName="pensiun";
-        pkFieldName="nip";
+        pkFieldName="idpensiun";
         fqn = PensiunModel.class.getName();
         plainClassName = "PensiunModel";
     }
@@ -47,6 +48,13 @@ public class _PensiunModel extends Model
     public String getAlasan_pensiun()
     {        return this.alasan_pensiun;
     }
+    public void setIdpensiun(String idpensiun)
+    {
+        this.idpensiun=idpensiun;
+    }
+    public String getIdpensiun()
+    {        return this.idpensiun;
+    }
     public void get()
     {
         _PensiunModel result = (_PensiunModel) super.getModel();
@@ -56,6 +64,7 @@ public class _PensiunModel extends Model
             setSk_pensiun(result.getSk_pensiun());
             setTmt_pensiun(result.getTmt_pensiun());
             setAlasan_pensiun(result.getAlasan_pensiun());
+            setIdpensiun(result.getIdpensiun());
         }
     }
 }

@@ -16,7 +16,7 @@
 </thead>
 <tfoot>
   <tr>
-    <td colspan="5" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
+    <td colspan="6" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
     <td class="rounded-foot-right">&nbsp;</td>
   </tr>
 </tfoot>
@@ -29,8 +29,8 @@
       <td>${item.tmt_pensiun}</td>
       <td>${item.alasan_pensiun}</td>
       <td>
-         <a href="<%=Config.base_url%>index/Pensiun/input/${item.nip}">Ubah</a>
-         <a href="<%=Config.base_url%>index/Pensiun/delete/${item.nip}" onClick="return confirm('Apakah Anda yakin?');">Hapus</a>
+         <a href="<%=Config.base_url%>index/Pensiun/input/${item.idpensiun}">Ubah</a>
+         <a href="<%=Config.base_url%>index/Pensiun/delete/${item.idpensiun}" onClick="return confirm('Apakah Anda yakin?');">Hapus</a>
       </td>
     </tr>
   </c:forEach>

@@ -19,7 +19,7 @@
 <td>nip</td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
-<input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nama_pegawai}"/>
+<input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>

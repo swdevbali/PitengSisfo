@@ -36,10 +36,10 @@ public class _Pensiun extends Controller
     public void chooseView()
     {
         isNeedAuthorization = true;
-        ChooserModel chooserModel = new ChooserModel("pensiun","nip");
-        row = chooserModel.getDataPerPage("select nip as id,pensiun as label from pensiun order by label");
+        ChooserModel chooserModel = new ChooserModel("pensiun","idpensiun");
+        row = chooserModel.getDataPerPage("select idpensiun as id,pensiun as label from pensiun order by label");
         request.setAttribute("row", row);
-        request.setAttribute("choose_pkFieldName", "nip");
+        request.setAttribute("choose_pkFieldName", "idpensiun");
         super.index("index_choose.jsp");
     }
 }

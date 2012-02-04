@@ -12,15 +12,13 @@ public class Anak extends _Anak {
     public void index() {
         PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
         Model model = initModel();
-        sqlViewDataPerPage = "select * from " + model.getTableName() +" where nip='" + pegawaiTerpilih.getNip() + "'";
+        sqlViewDataPerPage = "select * from " + model.getTableName() + " where nip='" + pegawaiTerpilih.getNip() + "'";
         super.index();
     }
 
     @Override
     public void input(String pkFieldValue) {
-        
         super.input(pkFieldValue);
     }
-    
     
 }
