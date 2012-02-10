@@ -9,16 +9,14 @@ import recite18th.model.Model;
 public class Anak extends _Anak {
 
     @Override
-    public void index() {
-        PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
-        Model model = initModel();
-        sqlViewDataPerPage = "select * from " + model.getTableName() + " where nip='" + pegawaiTerpilih.getNip() + "'";
-        super.index();
-    }
-
-    @Override
     public void input(String pkFieldValue) {
         super.input(pkFieldValue);
     }
-    
+
+    @Override
+    protected void initSqlViewDataPerPage() {
+        PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
+        Model model = initModel();
+        sqlViewDataPerPage = "select * from " + model.getTableName() + " where nip='" + pegawaiTerpilih.getNip() + "'";
+    }
 }

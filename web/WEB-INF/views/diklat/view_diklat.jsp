@@ -39,8 +39,8 @@
       <td>${item.tgl_sttpl}</td>
       <td>${item.jumlah_jam}</td>
       <td>
-         <a href="<%=Config.base_url%>index/Diklat/input/${item.idcuti}">Ubah</a>
-         <a href="<%=Config.base_url%>index/Diklat/delete/${item.idcuti}" onClick="return confirm('Apakah Anda yakin?');">Hapus</a>
+         <a href="<%=Config.base_url%>index/Diklat/input/${item.iddiklat}">Ubah</a>
+         <a href="<%=Config.base_url%>index/Diklat/delete/${item.iddiklat}" onClick="return confirm('Apakah Anda yakin?');">Hapus</a>
       </td>
     </tr>
   </c:forEach>

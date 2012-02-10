@@ -12,11 +12,14 @@ public class Diklat extends _Diklat {
         validationAddRule("jumlah_jam", "integer_bigger_than_zero");
     }
 
+
     @Override
-    public void index() {
-        PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
+    protected void initSqlViewDataPerPage() {
+       PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
         Model model = initModel();
         sqlViewDataPerPage = "select * from " + model.getTableName() + " where nip='" + pegawaiTerpilih.getNip() + "'";
-        super.index();
+        
     }
+    
+    
 }

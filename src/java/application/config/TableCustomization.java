@@ -32,12 +32,28 @@ public class TableCustomization
         hashTable = new Hashtable();
         
         Hashtable hashPegawai = new Hashtable();
-        hashPegawai.put("columnCount",5); //kolom No. tidak dihitung
+        hashPegawai.put("columnCount",17); //kolom No. tidak dihitung
         hashPegawai.put("nip","NIP");
         hashPegawai.put("no_karpeg","No. Kartu Pegawai");
-        hashPegawai.put("nama_pegawai","Nama");
+        hashPegawai.put("no_kartu_askes","No. Kartu Askes");
+        hashPegawai.put("nama_pegawai","Nama Pegawai");
         hashPegawai.put("tempat_lahir","Tempat Lahir");
+        hashPegawai.put("tgl_lahir","Tanggal Lahir");
+        hashPegawai.put("jenis_kelamin","Jenis Kelamin");
+        hashPegawai.put("agama","Agama");
+        hashPegawai.put("golongan_darah","Golongan Darah");
+        hashPegawai.put("status_perkawinan","Status Perkawinan");
+        hashPegawai.put("status_kepegawaian","Status Kepegawaian");
+        hashPegawai.put("pendidikan_terakhir","Pendidikan Terakhir");
+        hashPegawai.put("tgl_lahir","Tanggal Lahir");
         hashPegawai.put("pangkat_golongan_ruang","Pangk/Gol/Ruang");
+        hashPegawai.put("unit_kerja","Unit Kerja");
+        hashPegawai.put("bagian_unit_kerja","Bagian Unit Kerja");
+        hashPegawai.put("sub_unit_kerja","Sub Unit Kerja");
+        hashPegawai.put("alamat_ktp","Alamat KTP");
+        
+        
+        
         hashTable.put("pegawai", hashPegawai);
         
         Hashtable hashUserAccount = new Hashtable();

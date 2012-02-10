@@ -42,7 +42,7 @@
 body {
 	margin: 0; padding: 0;
 	font: 10px normal Arial, Helvetica, sans-serif;
-/*	background: #ddd url('<%=Config.base_url%>body_bg.gif') repeat-x;*/
+	background:#99CCCC url('<%=Config.base_url%>body_bg.gif') repeat-x;
 }
 .container {
 	width: 960px;
