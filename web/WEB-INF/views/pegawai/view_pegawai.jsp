@@ -1,7 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*,recite18th.library.Db,application.config.Config,recite18th.library.Pagination" %><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <% int pagenum = 0; %>
-<a href="<%=Config.base_url%>index/Pegawai/input/-1">Tambah Data</a> | <a href="<%=Config.base_url%>index/Pegawai/print/">Print</a> |
+<c:if test="${user_credential.role=='Administrator'}">
+<a href="<%=Config.base_url%>index/Pegawai/input/-1">Tambah Data</a> | 
+</c:if>
+<a href="<%=Config.base_url%>index/Pegawai/print/">Print</a> 
 <form action="<%=Config.base_url%>index/Pegawai/search/" method="post">
 Cari berdasarkan 
 <select name="search_criteria">
@@ -31,7 +34,7 @@ Nilai <input name="search_value" id="search_value" type="text" value="${sess_sea
 <tfoot>
   <tr>
     <td colspan="9" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
-    <td class="rounded-foot-right">&nbsp;</td>
+	 <td class="rounded-foot-right">&nbsp;</td>
   </tr>
 </tfoot>
 <tbody>
@@ -47,8 +50,10 @@ Nilai <input name="search_value" id="search_value" type="text" value="${sess_sea
       <td>${item.agama}</td>
       <td>${item.pangkat_golongan_ruang}</td>
       <td>
+	  <c:if test="${user_credential.role=='Administrator'}">
          <a href="<%=Config.base_url%>index/Pegawai/input/${item.nip}">Ubah</a>
          <a href="<%=Config.base_url%>index/Pegawai/delete/${item.nip}" onClick="return confirm('Apakah Anda yakin?');">Hapus</a>
+		 </c:if>
          <a href="<%=Config.base_url%>index/Pegawai/chooseAsMaster/${item.nip}">Pilih</a>
       </td>
     </tr>

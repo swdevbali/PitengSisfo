@@ -15,7 +15,7 @@
 </thead>
 <tfoot>
   <tr>
-    <td colspan="7" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
+    <td colspan="4" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
     <td class="rounded-foot-right">&nbsp;</td>
   </tr>
 </tfoot>
