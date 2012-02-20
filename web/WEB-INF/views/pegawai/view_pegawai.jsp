@@ -66,7 +66,7 @@ Nilai
 </thead>
 <tfoot>
   <tr>
-    <td colspan="9" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
+    <td colspan="12" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
 	 <td class="rounded-foot-right">&nbsp;</td>
   </tr>
 </tfoot>

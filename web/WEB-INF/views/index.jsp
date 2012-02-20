@@ -48,6 +48,7 @@ body {
 	width: 960px;
 	margin: 0 auto;
 	position: relative;
+	background-color:#FFFFFF;
 }
 #header {
 	background: url('<%=Config.base_url%>header_bg.gif') no-repeat center top;
@@ -129,6 +130,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 #header img {
 	margin: 20px 0 10px;
 }
+
 </style>
 </head>
 <body>
