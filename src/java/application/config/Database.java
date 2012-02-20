@@ -13,6 +13,6 @@ public class Database {
     public static final String PORT = "3306";
     public static final String DB = "piteng";
     public static final String USER_NAME = "root";
-    public static final String PASSWORD = "";
+    public static final String PASSWORD = "adminadmin";
     public static final String DB_TYPE="mysql" ;//mssql|mysql
 }
