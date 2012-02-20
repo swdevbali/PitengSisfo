@@ -60,13 +60,13 @@ Nilai
   <th scope="col" class="rounded-q1">Bagian Unit Kerja</th>
   <th scope="col" class="rounded-q1">Sub Unit Kerja</th>
   <th scope="col" class="rounded-q1">Pangkat/Gol</th>
-  <th scope="col" class="rounded-q1">Alamat KTP</th>
+<!--  <th scope="col" class="rounded-q1">Alamat KTP</th>-->
   <th scope="col" class="rounded-q4">Aksi</th>
   </tr>
 </thead>
 <tfoot>
   <tr>
-    <td colspan="12" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
+    <td colspan="11" class="rounded-foot-left"><%=Pagination.createLinks(pagenum)%></td>
 	 <td class="rounded-foot-right">&nbsp;</td>
   </tr>
 </tfoot>
@@ -84,7 +84,7 @@ Nilai
       <td>${item.bagian_unit_kerja}</td>
       <td>${item.sub_unit_kerja}</td>
       <td>${item.pangkat_golongan_ruang}</td>
-      <td>${item.alamat_ktp}</td>
+     <!-- <td>${item.alamat_ktp}</td>-->
       <td bordercolor="#0000FF">
 	  <c:if test="${user_credential.role=='Administrator'}">
          <a href="<%=Config.base_url%>index/Pegawai/input/${item.nip}"><strong>Ubah</strong></a>

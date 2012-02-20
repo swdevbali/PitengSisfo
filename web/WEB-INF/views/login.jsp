@@ -18,7 +18,8 @@
 .style6 {font-weight: bold}
 -->
 </style>
-<table width="50%" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#996600">
+<p align="center">
+<table width="50%" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#996600" style="background-repeat:no-repeat;background:url('<%=Config.base_url%>images/Kabupaten_Bantul.png')">
   <tr>
   <td width="70%" valign="top"><h1 align="center" class="style4">SELAMAT DATANG !</h1>
     <span class="style5"><br />
@@ -44,9 +45,13 @@
             <label>
             <input name="Reset" type="reset" id="Submit" value="Batal" onclick="javascript:history.back(-1);" />
             </label>
-         </div>
-    </form></td>
+        </div>
+    </form>
+	    <p><br/>
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;    </p></td>
     
 </table>
-
+</p>
 <p align="center">${flash_login_message}</p>

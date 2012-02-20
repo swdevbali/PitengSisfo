@@ -45,10 +45,11 @@ body {
 	background:#99CCCC url('<%=Config.base_url%>body_bg.gif') repeat-x;
 }
 .container {
-	width: 960px;
+	width: 1100px;
 	margin: 0 auto;
 	position: relative;
 	background-color:#FFFFFF;
+	
 }
 #header {
 	background: url('<%=Config.base_url%>header_bg.gif') no-repeat center top;
@@ -68,7 +69,7 @@ ul.topnav {
 	padding: 0 20px;	
 	margin: 0;
 	float: left;
-	width: 920px;
+	width: 1100px;
 	background: #222;
 	font-size: 1.2em;
 	background: url('<%=Config.base_url%>topnav_bg.gif') repeat-x;
@@ -129,6 +130,9 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 }
 #header img {
 	margin: 20px 0 10px;
+}
+.page {
+	margin:0px 5px;
 }
 
 </style>
