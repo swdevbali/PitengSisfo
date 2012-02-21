@@ -48,9 +48,9 @@ Tanggal : <%=formattedDate%>
 <p align="center" class="style2">&nbsp;</p>
 <table align="center">
   <tr>
-    <td width="200" rowspan="23" valign="top"><img src=<%=Config.base_url%>upload/${model.foto} alt="${model.nama_pegawai}" width="200" height="200"  /> </td>
+    <td width="200" rowspan="23" valign="top"><img src=<%=Config.base_url%>upload/${model.foto} alt="${model.nama_pegawai}" width="176" height="145"  /> </td>
     <td width="183">Nip</td>
-    <td width="280">${model.nip}</td>
+    <td width="392">${model.nip}</td>
   </tr>
   <tr>
     <td>No.Karpeg</td>
@@ -213,6 +213,28 @@ Tanggal : <%=formattedDate%>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
+  <tr class="odd">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="odd">
+    <td colspan="3">
+      <p align="center">Mengetahui</p>
+      <p align="center">Kepala Badan Kepegawaian </p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center"><u>Drs.Maman Permana</u></p>
+      <p align="center"> Nip: 197802042006041013</p>
+      
+      <div align="center">
+        <table cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="17" width="128">&nbsp;</td>
+          </tr>
+        </table>
+      </div></td></tr>
 </table>
+<p>&nbsp;</p>
 </body>
 </html>
