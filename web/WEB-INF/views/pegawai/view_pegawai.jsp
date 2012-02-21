@@ -7,7 +7,7 @@
 -->
 </style>
 
-<form action="<%=Config.base_url%>index/Pegawai/search/" method="post">
+<form action="<%=Config.base_url%>index/Pegawai/search" method="post">
   <div align="center">Cari berdasarkan 
     <select name="search_criteria">
       <option value="nip" 

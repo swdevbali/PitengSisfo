@@ -10,12 +10,13 @@ public class Pegawai extends _Pegawai {
 
     @Override
     protected void initSqlViewDataPerPage() {
-        UserAccountModel userAccount = (UserAccountModel) request.getSession().getAttribute("user_credential");
-        if (userAccount.getRole().equals("Administrator")) {
-            sqlViewDataPerPage = "select p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja ";
-        } else {
-            sqlViewDataPerPage = "select p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja and p.nip='" + userAccount.getNip() + "'";
-
+        if (request.getSession().getAttribute("sess_search_value") == null) {
+            UserAccountModel userAccount = (UserAccountModel) request.getSession().getAttribute("user_credential");
+            if (userAccount.getRole().equals("Administrator")) {
+                sqlViewDataPerPage = "select p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja ";
+            } else {
+                sqlViewDataPerPage = "select p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja and p.nip='" + userAccount.getNip() + "'";
+            }
         }
 
     }
