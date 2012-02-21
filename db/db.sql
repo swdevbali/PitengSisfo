@@ -359,10 +359,11 @@ CREATE TABLE `pegawai` (
 
 /*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;
 INSERT INTO `pegawai` (`nip`,`no_karpeg`,`no_kartu_askes`,`nama_pegawai`,`tempat_lahir`,`tgl_lahir`,`jenis_kelamin`,`agama`,`golongan_darah`,`status_perkawinan`,`pendidikan_terakhir`,`status_kepegawaian`,`pangkat_golongan_ruang`,`tmt_pangkat`,`no_sk`,`tgl_mulai_kerja`,`pejabat_berwenang`,`unit_kerja`,`kode_bagian_unit_kerja`,`kode_sub_unit_kerja`,`no_ktp`,`alamat_ktp`,`alamat_domisili`,`foto`) VALUES 
- ('195504091977031004','76','89999','Piteng','Jayapura','1980-01-01','Pria','Protestan','B','Belum Kawin','SMA','PNS','I/a - Juru Muda','1980-01-01','ioooo','1980-01-01','','Badan Kepegawaian','BS','SBM','','Pingit RT 2, RW 10/12, Jogjakarta, Indonesia','','DSC09994.JPG'),
- ('195511281979031005','','','Ela','Subang','1980-01-01','Wanita','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BPP','SBM','','Pulutan RT 67 Rogoitan Pendowoharjo Sewon Bantul','Bantul','DSC00017.JPG'),
- ('195602011980011002','12344','5678899','SUBIYANTI','Kasihan Bantul','1980-01-01','Wanita','Islam','AB','Kawin','S-1','PNS','I/a - Juru Muda','1980-01-01','','1980-01-01','Risman','Badan Kepegawaian','BPP','SBKA','','KECAMATAN KASIHAN','','DSC00017.JPG'),
- ('195607121977031005','','','Eko','Denpasar','1980-01-01','Pria','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BS','SBM','','Kemiri Gadingsari Sanden Bantul','Bantul','DSC00026.JPG');
+ ('195504091977031004','76','89999','Piteng','Jayapura','1980-01-01','Pria','Protestan','B','Belum Kawin','SMA','PNS','I/a - Juru Muda','1980-01-01','ioooo','1980-01-01','','Badan Kepegawaian','BS','SBM','','Pingit RT 2, RW 10/12, Jogjakarta, Indonesia','','Foto022.jpg'),
+ ('195511281979031005','','','Ela','Subang','1980-01-01','Wanita','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BPP','SBM','','Pulutan RT 67 Rogoitan Pendowoharjo Sewon Bantul','Bantul','IMG0068A.jpg'),
+ ('195602011980011002','12344','5678899','SUBIYANTI','Kasihan Bantul','1980-01-01','Wanita','Islam','AB','Kawin','S-1','PNS','I/a - Juru Muda','1980-01-01','','1980-01-01','Risman','Badan Kepegawaian','BPP','SBKA','','KECAMATAN KASIHAN','','IMG0125A.jpg'),
+ ('195607121977031005','','','Eko','Denpasar','1980-01-01','Pria','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BS','SBM','','Kemiri Gadingsari Sanden Bantul','Bantul','hy5.jpg'),
+ ('196009272006041004','58','76','SUADI','Bantul','1980-01-01','Pria','Budha','B','Belum Kawin','S-2','PNS','IV/a - Pembina','1980-01-01','023/BKD/1990','1980-01-01','Isak','Badan Kepegawaian','BPP','SBKA','1349','Kasihan Bantul','Bantul','IMG0065A.jpg');
 /*!40000 ALTER TABLE `pegawai` ENABLE KEYS */;
 
 
