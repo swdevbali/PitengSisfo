@@ -49,8 +49,7 @@ Nilai
 </c:if>
 
 <c:if test="${pegawai_terpilih_nip!=null}">
-<a href="<%=Config.base_url%>index/Pegawai/print/${pegawai_terpilih_nip}">Print Pegawai Terpilih</a> 
-</c:if>
+<a href="<%=Config.base_url%>index/Pegawai/printSingle/${pegawai_terpilih_nip}" target="_blank">Print Pegawai Terpilih</a></c:if>
 <br />
 <br />
 <table width="100%" id="rounded-corner">

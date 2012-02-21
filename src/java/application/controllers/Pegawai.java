@@ -8,20 +8,17 @@ import application.models.UserAccountModel;
 
 public class Pegawai extends _Pegawai {
 
-    
-
     @Override
     protected void initSqlViewDataPerPage() {
         UserAccountModel userAccount = (UserAccountModel) request.getSession().getAttribute("user_credential");
         if (userAccount.getRole().equals("Administrator")) {
             sqlViewDataPerPage = "select p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja ";
         } else {
-            sqlViewDataPerPage = "select p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja and p.nip='"+userAccount.getNip()+"'";
+            sqlViewDataPerPage = "select p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja and p.nip='" + userAccount.getNip() + "'";
 
         }
 
     }
-
 
     public void chooseAnother() {
         request.getSession().removeAttribute("pegawai_terpilih_nip");
@@ -54,5 +51,13 @@ public class Pegawai extends _Pegawai {
             sqlViewDataPerPage = "select  p.*,b.*,s.* from pegawai p, bagian_unit_kerja b, sub_unit_kerja s where p.kode_bagian_unit_kerja = b.kode_bagian_unit_kerja and p.kode_sub_unit_kerja = s.kode_sub_unit_kerja and " + criteria + " like '%" + value + "%'";
         }
         index();
+    }
+
+    public void printSingle(String nip) {
+        PegawaiModel pegawai_terpilih = new PegawaiModel();
+        pegawai_terpilih.addCriteria("nip", nip);
+        pegawai_terpilih.get();
+        request.getSession().setAttribute("model", pegawai_terpilih);
+        index("pegawai/cetak_pegawai.jsp");
     }
 }
