@@ -7,10 +7,6 @@
 -->
 </style>
 
-<c:if test="${user_credential.role=='Administrator'}">
-<a href="<%=Config.base_url%>index/Pegawai/input/-1">Tambah Data</a> | 
-</c:if>
-<a href="<%=Config.base_url%>index/Pegawai/print/">Print</a> 
 <form action="<%=Config.base_url%>index/Pegawai/search/" method="post">
   <div align="center">Cari berdasarkan 
     <select name="search_criteria">
@@ -44,6 +40,17 @@ Nilai
 <input name="search_submit" type="submit" value="Cari"/>
   </div>
 </form>
+
+<br />
+<br />
+<c:if test="${user_credential.role=='Administrator'}">
+<a href="<%=Config.base_url%>index/Pegawai/input/-1">Tambah Data</a> | 
+<a href="<%=Config.base_url%>index/Pegawai/print/">Print Semua Pegawai |</a> 
+</c:if>
+
+<c:if test="${pegawai_terpilih_nip!=null}">
+<a href="<%=Config.base_url%>index/Pegawai/print/${pegawai_terpilih_nip}">Print Pegawai Terpilih</a> 
+</c:if>
 <br />
 <br />
 <table width="100%" id="rounded-corner">
