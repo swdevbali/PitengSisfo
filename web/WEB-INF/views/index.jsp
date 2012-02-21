@@ -41,7 +41,7 @@
 <style type="text/css">
 body {
 	margin: 0; padding: 0;
-	font: 10px normal Arial, Helvetica, sans-serif;
+	font: 11px normal Arial, Helvetica, sans-serif;
 	background:#99CCCC url('<%=Config.base_url%>body_bg.gif') repeat-x;
 }
 .container {

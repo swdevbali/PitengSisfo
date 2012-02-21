@@ -33,7 +33,7 @@
 	<br />
   	<br />
   </tr>
-    <td width="40px" valign="top"><form action="<%=Config.base_url%>index/login/doLogin" method="post" class="style5">
+    <td width="40px" valign="top" background="../../diskominfo.jpg"><form action="<%=Config.base_url%>index/login/doLogin" method="post" class="style5">
         <div align="center">Username :      
             <input type="text" id="username" name="username"/>
             <br />
