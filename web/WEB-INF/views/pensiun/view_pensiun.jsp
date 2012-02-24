@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <% int pagenum = 0; %>
   <c:if test="${user_credential.role=='Administrator'}">
-<a href="<%=Config.base_url%>index/Pensiun/input/-1">Tambah Data</a> | </c:if> <a href="<%=Config.base_url%>index/Pensiun/print">Cetak</a>
+<a href="<%=Config.base_url%>index/Pensiun/input/-1">Tambah Data</a> | </c:if> <a href="<%=Config.base_url%>index/Pensiun/print/print">Cetak</a> |  <a href="<%=Config.base_url%>index/Pensiun/print/download">Download</a>
 <table width="100%" id="rounded-corner">
 <thead>
   <tr>

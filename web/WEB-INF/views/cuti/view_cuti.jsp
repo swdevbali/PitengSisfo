@@ -4,7 +4,8 @@
  <c:if test="${user_credential.role=='Administrator'}">
 <a href="<%=Config.base_url%>index/Cuti/input/-1">Tambah Data</a> |
 </c:if>
-<a href="<%=Config.base_url%>index/Cuti/print">Cetak</a>
+<a href="<%=Config.base_url%>index/Cuti/print/print" target="_blank">Cetak</a> |
+<a href="<%=Config.base_url%>index/Cuti/print/download" >Download</a>
 <table width="100%" id="rounded-corner">
 <thead>
   <tr>

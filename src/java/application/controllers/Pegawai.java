@@ -7,6 +7,11 @@ import application.models.PegawaiModel;
 import application.models.UserAccountModel;
 
 public class Pegawai extends _Pegawai {
+    
+    public Pegawai()
+    {
+        validationAddRule("nip", "len==18");
+    }
 
     @Override
     protected void initSqlViewDataPerPage() {

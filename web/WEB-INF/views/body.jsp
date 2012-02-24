@@ -4,7 +4,7 @@
 <c:if test="${body_content==null || body_content == ''}">
   <table width="100%" border="0">
     <tr>
-      <td width="53%" align="left" valign="top"><img src="<%=Config.base_url%>images/diskominfo.jpg" width="456" height="303" /></td>
+      <td width="53%" height="400" align="left" valign="top"><img src="<%=Config.base_url%>animasi3.gif" width="330" height="250" /><img src="<%=Config.base_url%>animasi1.gif" width="330" height="250" /><img src="<%=Config.base_url%>animasi2.gif" width="330" height="250" /></td>
       <td width="47%" valign="top"><p align="justify">Selamat Datang ${user_credential.role}!</p>
         <p align="justify">&nbsp;</p>
       <p align="justify">Aplikasi ini dibagi ke dalam menu-menu yang masing-masing menunjukkan fungsinya. Silahkan mulai bekerja pada suatu modul aplikasi dengan memilih menu pada navigasi di atas.</p>

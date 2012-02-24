@@ -38,7 +38,7 @@
 <tr>
 <td>nip</td>
 <td>
-<input name="nip" type="text" id="nip" value="${model.nip}"/>
+<input name="nip" type="text" id="nip" value="${model.nip}" <c:if test="${model.nip!=null && nip_error==null}"> readonly="true" </c:if>/><br/>${nip_error}
 <input name="hidden_nip" type="hidden" id="hidden_nip" value="${model.nip}"/>
 </td>
 </tr>

@@ -3,7 +3,8 @@
 <% int pagenum = 0; %>
  <c:if test="${user_credential.role=='Administrator'}">
 <a href="<%=Config.base_url%>index/Diklat/input/-1">Tambah Data</a> | </c:if>
- <a href="<%=Config.base_url%>index/Diklat/print">Cetak</a>
+<a href="<%=Config.base_url%>index/Diklat/print/print" target="_blank">Cetak</a> |
+<a href="<%=Config.base_url%>index/Diklat/print/download">Download</a> 
 <table width="100%" id="rounded-corner">
 <thead>
   <tr>

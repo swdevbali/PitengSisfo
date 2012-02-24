@@ -48,28 +48,34 @@ Tanggal : <%=formattedDate%>
 <p align="center" class="style2">&nbsp;</p>
 <table align="center">
   <tr>
-    <td width="200" rowspan="23" valign="top"><img src=<%=Config.base_url%>upload/${model.foto} alt="${model.nama_pegawai}" width="176" height="145"  /> </td>
+    <td width="200" rowspan="23" valign="top"><img src=<%=Config.base_url%>upload/${model.foto} alt="${model.nama_pegawai}" width="176" height="145"  /></td>
     <td width="183">Nip</td>
-    <td width="392">${model.nip}</td>
+    <td width="42"><div align="center">:</div></td>
+    <td width="533"> ${model.nip}</td>
   </tr>
   <tr>
     <td>No.Karpeg</td>
+    <td><div align="center">:</div></td>
     <td>${model.no_karpeg} </td>
   </tr>
   <tr>
     <td>No.Kartu Askes</td>
+    <td><div align="center">:</div></td>
     <td>${model.no_kartu_askes} </td>
   </tr>
   <tr>
     <td>Nama Pegawai </td>
+    <td><div align="center">:</div></td>
     <td>${model.nama_pegawai} </td>
   </tr>
   <tr>
     <td>Tempat Lahir </td>
+    <td><div align="center">:</div></td>
     <td>${model.tempat_lahir} </td>
   </tr>
   <tr>
     <td>Tgl Lahir </td>
+    <td><div align="center">:</div></td>
     <td>${model.tgl_lahir}
     <script>
  if(!isValidDate($('#tgl_lahir').val())) $('#tgl_lahir').val('1980-1-1');
@@ -96,34 +102,42 @@ Tanggal : <%=formattedDate%>
   </tr>
   <tr>
     <td>Jenis Kelamin </td>
+    <td><div align="center">:</div></td>
     <td>${model.jenis_kelamin} </td>
   </tr>
   <tr>
     <td>Agama</td>
+    <td><div align="center">:</div></td>
     <td>${model.agama} </td>
   </tr>
   <tr>
     <td>Gol.Darah</td>
+    <td><div align="center">:</div></td>
     <td>${model.golongan_darah} </td>
   </tr>
   <tr>
     <td>Status Kawin </td>
+    <td><div align="center">:</div></td>
     <td>${model.status_perkawinan} </td>
   </tr>
   <tr>
     <td>Pendidikan Akhir </td>
+    <td><div align="center">:</div></td>
     <td>${model.pendidikan_terakhir}</td>
   </tr>
   <tr>
     <td>Status Pegawai </td>
+    <td><div align="center">:</div></td>
     <td>${model.status_kepegawaian} </td>
   </tr>
   <tr>
     <td>Pangkat/Gol</td>
+    <td><div align="center">:</div></td>
     <td>${model.pangkat_golongan_ruang} </td>
   </tr>
   <tr>
     <td>TMT Pangkat </td>
+    <td><div align="center">:</div></td>
     <td>${model.tmt_pangkat}
         <script>
  if(!isValidDate($('#tmt_pangkat').val())) $('#tmt_pangkat').val('1980-1-1');
@@ -150,10 +164,12 @@ Tanggal : <%=formattedDate%>
   </tr>
   <tr>
     <td>No.SK</td>
+    <td><div align="center">:</div></td>
     <td>${model.no_sk} </td>
   </tr>
   <tr>
     <td>Tgl Mulai Kerja </td>
+    <td><div align="center">:</div></td>
     <td>${model.tgl_mulai_kerja}
         <script>
  if(!isValidDate($('#tgl_mulai_kerja').val())) $('#tgl_mulai_kerja').val('1980-1-1');
@@ -180,46 +196,55 @@ Tanggal : <%=formattedDate%>
   </tr>
   <tr>
     <td>Pejabat Berwenang </td>
+    <td><div align="center">:</div></td>
     <td>${model.pejabat_berwenang} </td>
   </tr>
   <tr>
     <td>Unit Kerja </td>
+    <td><div align="center">:</div></td>
     <td>${model.unit_kerja} </td>
   </tr>
   <tr>
     <td>Bagian Unit Kerja </td>
+    <td><div align="center">:</div></td>
     <td>${model.kode_bagian_unit_kerja}
       <a href="<%=Config.base_url%>index/BagianUnitKerja/chooseView?height=220&amp;width=700" class="thickbox"></a></td>
   </tr>
   <tr>
     <td>Sub Bagian Unit Kerja </td>
+    <td><div align="center">:</div></td>
     <td>${model.kode_sub_unit_kerja}
       <a href="<%=Config.base_url%>index/SubUnitKerja/chooseView?height=220&amp;width=700" class="thickbox"></a></td>
   </tr>
   <tr>
     <td>No.KTP</td>
+    <td><div align="center">:</div></td>
     <td>${model.no_ktp} </td>
   </tr>
   <tr>
     <td>Alamat KTP </td>
+    <td><div align="center">:</div></td>
     <td>${model.alamat_ktp} </td>
   </tr>
   <tr>
     <td>Alamat Domisi </td>
+    <td><div align="center">:</div></td>
     <td>${model.alamat_domisili} </td>
   </tr>
   <tr class="odd">
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-  </tr>
-  <tr class="odd">
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr class="odd">
-    <td colspan="3">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="odd">
+    <td colspan="4">
       <p align="center">Mengetahui</p>
       <p align="center">Kepala Badan Kepegawaian </p>
       <p align="center">&nbsp;</p>

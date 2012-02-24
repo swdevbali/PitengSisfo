@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
 <html>
 <head>
-<title>Sistem Informasi Pegawai Bantul 2011</title>
+<title>Sistem Informasi Kepegawaian Daerah Kabupaten Bantul 2011</title>
 <link rel="shortcut icon" type="image/png" href="<%=Config.base_url%>images/favicon.png">
 <link type="text/css" href="<%=Config.base_url%>css/main.css" rel="stylesheet"/>
 <link type="text/css" href="<%=Config.base_url%>css/thickbox.css" rel="stylesheet"/>
@@ -52,8 +52,8 @@ body {
 	
 }
 #header {
-	background: url('<%=Config.base_url%>header_bg.gif') no-repeat center top;
-	padding-top: 120px;
+	/*background: url('<%=Config.base_url%>Movie1.swf') no-repeat center top;*/
+	padding-top: 0px;
 }
 #header .disclaimer {
 	color: #999;
@@ -69,7 +69,7 @@ ul.topnav {
 	padding: 0 20px;	
 	margin: 0;
 	float: left;
-	width: 1100px;
+	width: 1060px;
 	background: #222;
 	font-size: 1.2em;
 	background: url('<%=Config.base_url%>topnav_bg.gif') repeat-x;

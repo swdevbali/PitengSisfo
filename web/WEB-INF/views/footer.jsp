@@ -11,7 +11,7 @@
 <div class="footer">
   <div align="center">
     <h2><br />
-      <span class="style1"><a href="<%=Config.base_url %>index/About">Hak Cipta (C) Piteng Uropdana</a></span><span class="style2"><a href="<%=Config.base_url %>index/About"><%=Config.production_year%> <%=Config.author%></a></span></h2>
+      <span class="style1"><a href="<%=Config.base_url %>index/About">Hak Cipta (C)Uropdana</a></span><span class="style2"><a href="<%=Config.base_url %>index/About"><%=Config.production_year%> <%=Config.author%></a></span></h2>
   </div>
 </div>
 </div>

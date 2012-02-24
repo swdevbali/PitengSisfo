@@ -2,6 +2,11 @@
       <br />
 <!-- Navigational menu -->
 <div id="header">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1100" height="120" title="Kab Bantul">
+    <param name="movie" value="<%=Config.base_url%>Movie1.swf" />
+    <param name="quality" value="high" />
+    <embed src="<%=Config.base_url%>Movie1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="120"></embed>
+  </object>
 <ul class="topnav">  
   <li><a href="<%=Config.base_url%>">Home</a></li>  
   <c:if test="${user_credential.role=='Administrator'}">
