@@ -2,7 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <% int pagenum = 0; %>
 <a href="<%=Config.base_url%>index/SubUnitKerja/input/-1">Tambah Data</a>
-|| <a href="<%=Config.base_url%>index/SubUnitKerja/print">Cetak</a>
+|| <a href="<%=Config.base_url%>index/SubUnitKerja/print/print" target="_blank">Cetak</a> ||
+<a href="<%=Config.base_url%>index/SubUnitKerja/print/download">Download</a>
 <table width="100%" id="rounded-corner">
 <thead>
   <tr>

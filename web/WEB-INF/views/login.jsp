@@ -12,29 +12,32 @@ body,td,th {
 body {
 	background-image: url();
 }
-.style8 {color: #0000FF}
 .style11 {font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #FFFFFF; }
-.style12 {font-family: Verdana, Arial, Helvetica, sans-serif}
-.style19 {
-	font-family: "Courier New", Courier, monospace;
-	font-weight: bold;
-	color: #000000;
-	font-size: 14px;
-}
-.style20 {
-	font-size: 14px;
-	color: #000000;
-}
 .style21 {color: #000000}
+.style23 {
+	font-size: 36px;
+	color: #0000FF;
+}
+.style26 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style27 {
+	color: #0000FF;
+	font-size: 14px;
+	font-style: italic;
+}
+.style28 {
+	font-size: 14px;
+	color: #0000CC;
+	font-style: italic;
+}
 -->
 </style>
-<p align="center">
-<table width="45%" height="334" border="0" align="center">
+<p align="center" class="style23"><marquee><span class="style26">SELAMAT DATANG DI SISTEM INFORMASI BADAN KEPEGAWAIAN DAERAH BANTUL</span></marquee></h1>
+<br />
+<table width="45%" height="35
+0" border="0" align="center" bgcolor="#99FFFF">
   <tr>
-  <td width="582" height="196" valign="top" ><h1 align="center" class="style4 style21"><marquee>SELAMAT DATANG !</marquee></h1>
-    <p align="center" class="style19 style20">DI  SISTEM INFORMASI BADAN KEPEGAWAIAN DAERAH BANTUL.</p>
-    <p align="center" class="style19">LOGIN TERLEBIH DAHULU UNTUK MASUK PADA SISTEM INI. </p>
-    <p align="center" class="style11"><span class="style19">SELAMAT BEKERJA !!! </span></p>    </td>
+  <td width="582" height="20" valign="top" bgcolor="#FFFFFF" ><marquee>
+  </marquee>      <span class="style27">Silahkan Masukkan Usrname dan Password </span><span class="style28">Anda</span></td>
   <br />
   	<br />
   </tr>
@@ -95,11 +98,10 @@ body {
               </table></td>
             </tr>
           </table>
-          </div>
+        </div>
         <span class="style11"><label></label>
         </span><span class="style11"><br />
-        </span></form>
-     </td>
+        </span></form>     </td>
     
 </table>
 <div align="center"><div align="justify"><div align="right"><div align="left"><div align="center"><div align="justify"><blockquote>

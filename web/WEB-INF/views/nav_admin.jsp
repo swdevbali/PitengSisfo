@@ -1,5 +1,5 @@
 <li> 
-  <a href="<%=Config.base_url%>index/Pegawai">Pegawai</a>  
+  <a href="<%=Config.base_url%>index/Pegawai">PEGAWAI</a>  
 <!--  <ul class="subnav">
     <li><a href="<%=Config.base_url%>index/Pegawai">Pegawai</a></li>
     <li><a href="<%=Config.base_url%>index/Anak">Anak</a></li>
@@ -21,7 +21,7 @@
   </ul>-->
 </li>
 <li> 
-  <a href="#">Master</a>  
+  <a href="#">MASTER</a>  
   <ul class="subnav">
     <li><a href="<%=Config.base_url%>index/BagianUnitKerja">Bagian Unit Kerja</a></li>
     <li><a href="<%=Config.base_url%>index/SubUnitKerja">Sub Unit Kerja</a></li>

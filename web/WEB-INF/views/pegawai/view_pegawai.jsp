@@ -86,7 +86,7 @@ Nilai
   <c:forEach items="${row}" var="item" varStatus="status" >
     <tr>
       <td>${status.count}</td>
-      <td><img src="<%=Config.base_url%>upload/${item.foto}" width=100 height=100/></td>
+      <td><img src="<%=Config.base_url%>upload/${item.foto}" width=76 height=100/></td>
       <td>${item.nip}</td>
       <td>${item.nama_pegawai}</td>
       <td>${item.tempat_lahir}</td>
