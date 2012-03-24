@@ -1,9 +1,9 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*,recite18th.library.Db,application.config.Config,recite18th.library.Pagination" %>
+<%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,recite18th.library.Db,application.config.Config,recite18th.library.Pagination" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
 <html>
 <head>
-<title>Sistem Informasi Pegawai Bantul 2011</title>
+<title>Sistem Informasi Kepegawaian Daerah Kabupaten Bantul 2011</title>
 <link rel="shortcut icon" type="image/png" href="<%=Config.base_url%>images/favicon.png">
 <link type="text/css" href="<%=Config.base_url%>css/main.css" rel="stylesheet"/>
 <link type="text/css" href="<%=Config.base_url%>css/thickbox.css" rel="stylesheet"/>
@@ -45,15 +45,15 @@ body {
 	background:#99CCCC url('<%=Config.base_url%>body_bg.gif') repeat-x;
 }
 .container {
-	width: 1100px;
+	width: 1050px;
 	margin: 0 auto;
 	position: relative;
-	background-color:#FFFFFF;
+	background-color:#EEEF3F;
 	
 }
 #header {
-	background: url('<%=Config.base_url%>header_bg.gif') no-repeat center top;
-	padding-top: 120px;
+	/*background: url('<%=Config.base_url%>Movie1.swf') no-repeat center top;*/
+	padding-top: 0px;
 }
 #header .disclaimer {
 	color: #999;
@@ -69,8 +69,8 @@ ul.topnav {
 	padding: 0 20px;	
 	margin: 0;
 	float: left;
-	width: 1100px;
-	background: #222;
+	width: 1011px;
+	background: #333;
 	font-size: 1.2em;
 	background: url('<%=Config.base_url%>topnav_bg.gif') repeat-x;
 }
@@ -136,7 +136,40 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 }
 
 </style>
-</head>
+
+<style type="text/css">
+<!--
+body,td,th {
+	color: #000000;
+}
+body {
+	background-image: url();
+	margin-left: 1px;
+	margin-top: 1px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+.style15 {font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #FFFFFF; }
+.style15 {color: #000000}
+.style15 {
+	font-size: 36px;
+	color: #0000FF;
+}
+.style27 {
+	color: #0000FF;
+	font-size: 14px;
+	font-style: italic;
+}
+.style28 {
+	font-size: 14px;
+	color: #0000CC;
+	font-style: italic;
+}
+.style33 {color: #0000FF; font-size: 24px; font-style: italic; }
+-->
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
 <body>
 <div class="container">
 <%@ include file="header.jsp" %>
@@ -145,8 +178,9 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 
 <div class="page" id="page">
 	<div class="content">
-	<%@ include file="body.jsp" %>
-	</div>
+	  <tr><td height="24" valign="top"><div align="center">
+	    <%@ include file="body.jsp" %>
+</div>
 </div>
 <%@ include file="footer.jsp" %>
 </div>

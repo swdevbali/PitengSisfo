@@ -7,12 +7,12 @@
 <table id="hor-zebra" summary="Form UserAccount">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form UserAccount </th>
+<th colspan="2" class="odd" scope="col">FORM USERACCOUNT </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="hidden_nip" type="hidden" id="hidden_nip" value="${model.nip}"/>
@@ -20,28 +20,28 @@
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>name</td>
+<td><span class="style1">Name</span></td>
 <td>
 <input name="name" type="text" id="name" value="${model.name}"/>
 ${name_error}
 </td>
 </tr>
 <tr>
-<td>password</td>
+<td><span class="style1">Password</span></td>
 <td>
 <input name="password" type="text" id="password" value="${model.password}"/>
 ${password_error}
 </td>
 </tr>
 <tr>
-<td>email</td>
+<td><span class="style1">Email</span></td>
 <td>
 <input name="email" type="text" id="email" value="${model.email}"/>
 ${email_error}
 </td>
 </tr>
 <tr>
-<td>role</td>
+<td><span class="style1">Role</span></td>
 <td>
 <select name="role" id="role">
 	<option <c:if test="${model.role=='Pegawai'}"> selected="selected" </c:if> value="Pegawai">Pegawai</option>
@@ -51,7 +51,7 @@ ${email_error}
 </td>
 </tr>
 <tr>
-<td>username</td>
+<td><span class="style1">Username</span></td>
 <td>
 <input name="username" type="text" id="username" value="${model.username}"/>
 ${username_error}

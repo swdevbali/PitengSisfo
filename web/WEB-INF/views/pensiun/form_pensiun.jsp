@@ -7,26 +7,26 @@
 <table id="hor-zebra" summary="Form Pensiun">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Pensiun </th>
+<th colspan="4" class="odd" scope="col">FORM PENSIUN </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>sk_pensiun</td>
+<td><span class="style1">SK Pensiun</span></td>
 <td>
 <input name="sk_pensiun" type="text" id="sk_pensiun" value="${model.sk_pensiun}"/>
 ${sk_pensiun_error}
 </td>
 </tr>
 <tr>
-<td>tmt_pensiun</td>
+<td><span class="style1">TMT Pensiun</span></td>
 <td>
 <input name="tmt_pensiun" type="text" id="tmt_pensiun" value="${model.tmt_pensiun}"/>
 <script>
@@ -54,7 +54,7 @@ ${sk_pensiun_error}
 </td>
 </tr>
 <tr>
-<td>alasan_pensiun</td>
+<td><span class="style1">Alasan Pensiun</span></td>
 <td>
 <input name="alasan_pensiun" type="text" id="alasan_pensiun" value="${model.alasan_pensiun}"/>
 ${alasan_pensiun_error}

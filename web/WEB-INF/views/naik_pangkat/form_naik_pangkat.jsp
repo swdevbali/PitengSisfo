@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form NaikPangkat">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form NaikPangkat </th>
+<th colspan="2" class="odd" scope="col">FORM KENAIKAN PANGKAT </th>
 </tr>
 </thead>
 <tbody>
@@ -16,14 +16,14 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>jenis_kenaikan_pangkat</td>
+<td><span class="style1">Jenis Kenaikan Pangkat</span></td>
 <td>
 <select name="jenis_kenaikan_pangkat" id="jenis_kenaikan_pangkat">
 	<option <c:if test="${model.jenis_kenaikan_pangkat=='Kenaikan Pangkat Reguler'}"> selected="selected" </c:if> value="Kenaikan Pangkat Reguler">Kenaikan Pangkat Reguler</option>
@@ -35,7 +35,7 @@
 </td>
 </tr>
 <tr>
-<td>kenaikan_pangkat_pilihan</td>
+<td><span class="style1">Kenaikan Pangkat Pilihan</td>
 <td>
 <select name="kenaikan_pangkat_pilihan" id="kenaikan_pangkat_pilihan">
 	<option <c:if test="${model.kenaikan_pangkat_pilihan=='Menduduki jabatan struktural atau jabatan tertentu'}"> selected="selected" </c:if> value="Menduduki jabatan struktural atau jabatan tertentu">Menduduki jabatan struktural atau jabatan tertentu</option>
@@ -52,7 +52,7 @@
 </td>
 </tr>
 <tr>
-<td>tmt_Pangkat</td>
+<td><span class="style1">TMT Pangkat</span></td>
 <td>
 <input name="tmt_Pangkat" type="text" id="tmt_Pangkat" value="${model.tmt_Pangkat}"/>
 <script>
@@ -80,21 +80,21 @@
 </td>
 </tr>
 <tr>
-<td>gaji_pokok</td>
+<td><span class="style1">Gaji Pokok</span></td>
 <td>
 <input name="gaji_pokok" type="text" id="gaji_pokok" value="${model.gaji_pokok}"/>
 ${gaji_pokok_error}
 </td>
 </tr>
 <tr>
-<td>no_sk_pangkat</td>
+<td><span class="style1">No.SK Pangkat</span></td>
 <td>
 <input name="no_sk_pangkat" type="text" id="no_sk_pangkat" value="${model.no_sk_pangkat}"/>
 ${no_sk_pangkat_error}
 </td>
 </tr>
 <tr>
-<td>tgl_sk_pangkat</td>
+<td><span class="style1">Tgl SK Pangkat</span></td>
 <td>
 <input name="tgl_sk_pangkat" type="text" id="tgl_sk_pangkat" value="${model.tgl_sk_pangkat}"/>
 <script>
@@ -122,14 +122,14 @@ ${no_sk_pangkat_error}
 </td>
 </tr>
 <tr>
-<td>pejabat_berwenang</td>
+<td><span class="style1">Pejabat Berwenang</span></td>
 <td>
 <input name="pejabat_berwenang" type="text" id="pejabat_berwenang" value="${model.pejabat_berwenang}"/>
 ${pejabat_berwenang_error}
 </td>
 </tr>
 <tr>
-<td>nama_pangkat</td>
+<td><span class="style1">Nama Pangkat</span></td>
 <td>
 <input name="nama_pangkat" type="text" id="nama_pangkat" value="${model.nama_pangkat}"/>
 ${nama_pangkat_error}

@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form Jabatan">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Jabatan </th>
+<th colspan="2" class="odd" scope="col">FORM JABATAN </th>
 </tr>
 </thead>
 <tbody>
@@ -16,21 +16,21 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>nama_jabatan</td>
+<td><span class="style1">Nama Jabatan</span></td>
 <td>
 <input name="nama_jabatan" type="text" id="nama_jabatan" value="${model.nama_jabatan}"/>
 ${nama_jabatan_error}
 </td>
 </tr>
 <tr>
-<td>jenis_Jabatan</td>
+<td><span class="style1">Jenis Jabatan</span></td>
 <td>
 <select name="jenis_Jabatan" id="jenis_Jabatan">
 	<option <c:if test="${model.jenis_Jabatan=='Struktural'}"> selected="selected" </c:if> value="Struktural">Struktural</option>
@@ -42,14 +42,14 @@ ${nama_jabatan_error}
 </td>
 </tr>
 <tr>
-<td>eselon</td>
+<td><span class="style1">Eselon</span></td>
 <td>
 <input name="eselon" type="text" id="eselon" value="${model.eselon}"/>
 ${eselon_error}
 </td>
 </tr>
 <tr>
-<td>unit_kerja</td>
+<td><span class="style1">Unit Kerja</span></td>
 <td>
 <select name="unit_kerja" id="unit_kerja">
 	<option <c:if test="${model.unit_kerja=='Badan Kepegawaian'}"> selected="selected" </c:if> value="Badan Kepegawaian">Badan Kepegawaian</option>
@@ -58,14 +58,14 @@ ${eselon_error}
 </td>
 </tr>
 <tr>
-<td>kode_sub_unit_kerja</td>
+<td><span class="style1">Kode Sub Unit Kerja</td>
 <td>
 <input name="kode_sub_unit_kerja" type="hidden" id="kode_sub_unit_kerja" value="${model.kode_sub_unit_kerja}"/>
 <input name="label_kode_sub_unit_kerja" readonly="true" type="text" id="label_kode_sub_unit_kerja" value="${model.kode_sub_unit_kerja}"/>
 <a href="<%=Config.base_url%>index/SubUnitKerja/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>tmt_jabatan</td>
+<td><span class="style1">TMT Jabatan</span></td>
 <td>
 <input name="tmt_jabatan" type="text" id="tmt_jabatan" value="${model.tmt_jabatan}"/>
 <script>
@@ -93,14 +93,14 @@ ${eselon_error}
 </td>
 </tr>
 <tr>
-<td>no_sk_jabatan</td>
+<td><span class="style1">No.SK Jabatan</span></td>
 <td>
 <input name="no_sk_jabatan" type="text" id="no_sk_jabatan" value="${model.no_sk_jabatan}"/>
 ${no_sk_jabatan_error}
 </td>
 </tr>
 <tr>
-<td>tgl_sk_jabatan</td>
+<td><span class="style1">Tgl SK Jabatan</span></td>
 <td>
 <input name="tgl_sk_jabatan" type="text" id="tgl_sk_jabatan" value="${model.tgl_sk_jabatan}"/>
 <script>
@@ -128,14 +128,14 @@ ${no_sk_jabatan_error}
 </td>
 </tr>
 <tr>
-<td>no_surat_pelantikan</td>
+<td><span class="style1">No. surat Pelantikan</span></td>
 <td>
 <input name="no_surat_pelantikan" type="text" id="no_surat_pelantikan" value="${model.no_surat_pelantikan}"/>
 ${no_surat_pelantikan_error}
 </td>
 </tr>
 <tr>
-<td>tgl_surat_pelantikan</td>
+<td><span class="style1">Tgl Surat Pelantikan</span></td>
 <td>
 <input name="tgl_surat_pelantikan" type="text" id="tgl_surat_pelantikan" value="${model.tgl_surat_pelantikan}"/>
 <script>
@@ -163,14 +163,14 @@ ${no_surat_pelantikan_error}
 </td>
 </tr>
 <tr>
-<td>pejabat_berwenang</td>
+<td><span class="style1">Pejabat Berwenang</span></td>
 <td>
 <input name="pejabat_berwenang" type="text" id="pejabat_berwenang" value="${model.pejabat_berwenang}"/>
 ${pejabat_berwenang_error}
 </td>
 </tr>
 <tr>
-<td>kode_bagian_unit_kerja</td>
+<td><span class="style1">Kode Bagian Unit Kerja</span></td>
 <td>
 <input name="kode_bagian_unit_kerja" type="hidden" id="kode_bagian_unit_kerja" value="${model.kode_bagian_unit_kerja}"/>
 <input name="label_kode_bagian_unit_kerja" readonly="true" type="text" id="label_kode_bagian_unit_kerja" value="${model.kode_bagian_unit_kerja}"/>
@@ -178,7 +178,7 @@ ${pejabat_berwenang_error}
 </tr>
 <tr class="odd">
 <td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="Simpan"><input name="Button" type="button" id="Submit" value="Batal" onClick="javascript:history.back(-1);"></td>
+<td><input type="submit" name="Submit" value="SIMPAN"><input name="Button" type="button" id="Submit" value="BATAL" onClick="javascript:history.back(-1);"></td>
 </tr>
 </tbody>
 </table>

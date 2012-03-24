@@ -7,12 +7,12 @@
 <table id="hor-zebra" summary="Form BagianUnitKerja">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form BagianUnitKerja </th>
+<th colspan="2" class="odd" scope="col">FOEM BAGIAN UNIT KERJA </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>kode_bagian_unit_kerja</td>
+<td><span class="style1">Kode Bagian Unit Kerja</span></td>
 <td>
 <input name="kode_bagian_unit_kerja" type="text" id="kode_bagian_unit_kerja" value="${model.kode_bagian_unit_kerja}"/>
 ${kode_bagian_unit_kerja_error}
@@ -20,7 +20,7 @@ ${kode_bagian_unit_kerja_error}
 </td>
 </tr>
 <tr>
-<td>bagian_unit_kerja</td>
+<td><span class="style1">Bagian Unit Kerja</span></td>
 <td>
 <input name="bagian_unit_kerja" type="text" id="bagian_unit_kerja" value="${model.bagian_unit_kerja}"/>
 ${bagian_unit_kerja_error}

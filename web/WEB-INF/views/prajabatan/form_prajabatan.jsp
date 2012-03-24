@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form Prajabatan">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Prajabatan </th>
+<th colspan="2" class="odd" scope="col">FORM PRAJABATAN </th>
 </tr>
 </thead>
 <tbody>
@@ -16,14 +16,14 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>jenis_prajabatan</td>
+<td><span class="style1">Jenis Prajabatan</span></td>
 <td>
 <select name="jenis_prajabatan" id="jenis_prajabatan">
 	<option <c:if test="${model.jenis_prajabatan=='Diklat Prajabatan Golongan I'}"> selected="selected" </c:if> value="Diklat Prajabatan Golongan I">Diklat Prajabatan Golongan I</option>
@@ -34,21 +34,21 @@
 </td>
 </tr>
 <tr>
-<td>tempat</td>
+<td><span class="style1">Tempat</span></td>
 <td>
 <input name="tempat" type="text" id="tempat" value="${model.tempat}"/>
 ${tempat_error}
 </td>
 </tr>
 <tr>
-<td>penyelenggara</td>
+<td><span class="style1">Penyelenggara</span></td>
 <td>
 <input name="penyelenggara" type="text" id="penyelenggara" value="${model.penyelenggara}"/>
 ${penyelenggara_error}
 </td>
 </tr>
 <tr>
-<td>tgl_pelaksanaan</td>
+<td><span class="style1">Tgl Pelaksanaan</span></td>
 <td>
 <input name="tgl_pelaksanaan" type="text" id="tgl_pelaksanaan" value="${model.tgl_pelaksanaan}"/>
 <script>
@@ -76,14 +76,14 @@ ${penyelenggara_error}
 </td>
 </tr>
 <tr>
-<td>no_sttpl</td>
+<td><span class="style1">No.STTPL</span></td>
 <td>
 <input name="no_sttpl" type="text" id="no_sttpl" value="${model.no_sttpl}"/>
 ${no_sttpl_error}
 </td>
 </tr>
 <tr>
-<td>tgl_sttpl</td>
+<td><span class="style1">Tgl STTPL</span></td>
 <td>
 <input name="tgl_sttpl" type="text" id="tgl_sttpl" value="${model.tgl_sttpl}"/>
 <script>

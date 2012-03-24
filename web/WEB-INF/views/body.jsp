@@ -1,15 +1,31 @@
+<style type="text/css">
+<!--
+body {
+	background-image: url();
+}
+.style25 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #0099FF;
+}
+-->
+</style>
 <c:if test="${body_content !=null && body_content != ''}">
   <jsp:include page="${body_content}" />
 </c:if>
 <c:if test="${body_content==null || body_content == ''}">
-  <table width="100%" border="0">
+ 
     <tr>
-      <td width="53%" align="left" valign="top"><img src="<%=Config.base_url%>images/diskominfo.jpg" width="456" height="303" /></td>
-      <td width="47%" valign="top"><p align="justify">Selamat Datang ${user_credential.role}!</p>
-        <p align="justify">&nbsp;</p>
-      <p align="justify">Aplikasi ini dibagi ke dalam menu-menu yang masing-masing menunjukkan fungsinya. Silahkan mulai bekerja pada suatu modul aplikasi dengan memilih menu pada navigasi di atas.</p>
-      <p align="justify">&nbsp;</p>
-      <p align="justify">Selamat bekerja!</p></td>
-    </tr>
-  </table>
-</c:if>
+   <td width="9%" rowspan="2" align="left" valign="top"><p>&nbsp;</p>
+    </td>
+      <td height="24" valign="top"><div align="center"><span class="style1">
+        <div align="center" class="style1"><marquee class="style28 style34">
+<span class="style35">
+<div align="center"><span class="style25">Selamat Datang  ${user_credential.role}
+  </span>
+</div>
+<marquee/> 
+	      </table>
+          </c:if>
+        
+    

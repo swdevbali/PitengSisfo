@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form Cuti">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Cuti </th>
+<th colspan="2" class="odd" scope="col">FORM CUTI </th>
 </tr>
 </thead>
 <tbody>
@@ -16,14 +16,14 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>jenis_cuti</td>
+<td><span class="style1">Jenis Cuti</span></td>
 <td>
 <select name="jenis_cuti" id="jenis_cuti">
 	<option <c:if test="${model.jenis_cuti=='Cuti Tahunan'}"> selected="selected" </c:if> value="Cuti Tahunan">Cuti Tahunan</option>
@@ -36,14 +36,14 @@
 </td>
 </tr>
 <tr>
-<td>no_surat_ijin_cuti</td>
+<td><span class="style1">No.Surat Ijin Cuti</span></td>
 <td>
 <input name="no_surat_ijin_cuti" type="text" id="no_surat_ijin_cuti" value="${model.no_surat_ijin_cuti}"/>
 ${no_surat_ijin_cuti_error}
 </td>
 </tr>
 <tr>
-<td>tgl_surat_ijin_cuti</td>
+<td><span class="style1">Tgl Surat Ijin Cuti</span></td>
 <td>
 <input name="tgl_surat_ijin_cuti" type="text" id="tgl_surat_ijin_cuti" value="${model.tgl_surat_ijin_cuti}"/>
 <script>
@@ -71,7 +71,7 @@ ${no_surat_ijin_cuti_error}
 </td>
 </tr>
 <tr>
-<td>tgl_awal_cuti</td>
+<td><span class="style1">Tgl Awal Cuti</span></td>
 <td>
 <input name="tgl_awal_cuti" type="text" id="tgl_awal_cuti" value="${model.tgl_awal_cuti}"/>
 <script>
@@ -99,7 +99,7 @@ ${no_surat_ijin_cuti_error}
 </td>
 </tr>
 <tr>
-<td>tgl_akhir_cuti</td>
+<td><span class="style1">Tgl Akhir Cuti</span></td>
 <td>
 <input name="tgl_akhir_cuti" type="text" id="tgl_akhir_cuti" value="${model.tgl_akhir_cuti}"/>
 <script>
@@ -127,7 +127,7 @@ ${no_surat_ijin_cuti_error}
 </td>
 </tr>
 <tr>
-<td>pejabat_berwenang</td>
+<td><span class="style1">Pejabat Berwenang</span></td>
 <td>
 <input name="pejabat_berwenang" type="text" id="pejabat_berwenang" value="${model.pejabat_berwenang}"/>
 ${pejabat_berwenang_error}

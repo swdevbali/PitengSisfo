@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form Anak">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Anak </th>
+<th colspan="2" class="odd" scope="col">FORM ANAK </th>
 </tr>
 </thead>
 <tbody>
@@ -16,28 +16,28 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>anak_ke</td>
+<td><span class="style1">Anak Ke</span></td>
 <td>
 <input name="anak_ke" type="text" id="anak_ke" value="${model.anak_ke}"/>
 ${anak_ke_error}
 </td>
 </tr>
 <tr>
-<td>nama_anak</td>
+<td><span class="style1">Nama Anak</span></td>
 <td>
 <input name="nama_anak" type="text" id="nama_anak" value="${model.nama_anak}"/>
 ${nama_anak_error}
 </td>
 </tr>
 <tr>
-<td>status_anak</td>
+<td><span class="style1">Status Anak</span></td>
 <td>
 <select name="status_anak" id="status_anak">
 	<option <c:if test="${model.status_anak=='Anak Kandung'}"> selected="selected" </c:if> value="Anak Kandung">Anak Kandung</option>
@@ -48,14 +48,14 @@ ${nama_anak_error}
 </td>
 </tr>
 <tr>
-<td>tempat_lahir</td>
+<td><span class="style1">Tempat Lahir</span></td>
 <td>
 <input name="tempat_lahir" type="text" id="tempat_lahir" value="${model.tempat_lahir}"/>
 ${tempat_lahir_error}
 </td>
 </tr>
 <tr>
-<td>tgl_lahir</td>
+<td><span class="style1">Tgl Lahir</span></td>
 <td>
 <input name="tgl_lahir" type="text" id="tgl_lahir" value="${model.tgl_lahir}"/>
 <script>
@@ -83,7 +83,7 @@ ${tempat_lahir_error}
 </td>
 </tr>
 <tr>
-<td>jenis_kelamin</td>
+<td><span class="style1">Jenis Kelamin</span></td>
 <td>
 <select name="jenis_kelamin" id="jenis_kelamin">
 	<option <c:if test="${model.jenis_kelamin=='Pria'}"> selected="selected" </c:if> value="Pria">Pria</option>
@@ -93,7 +93,7 @@ ${tempat_lahir_error}
 </td>
 </tr>
 <tr>
-<td>pendidikan</td>
+<td><span class="style1">Pendidikan</span></td>
 <td>
 <select name="pendidikan" id="pendidikan">
 	<option <c:if test="${model.pendidikan=='SD'}"> selected="selected" </c:if> value="SD">SD</option>
@@ -109,14 +109,14 @@ ${tempat_lahir_error}
 </td>
 </tr>
 <tr>
-<td>pekerjaan</td>
+<td><span class="style1">Pekerjaan</span></td>
 <td>
 <input name="pekerjaan" type="text" id="pekerjaan" value="${model.pekerjaan}"/>
 ${pekerjaan_error}
 </td>
 </tr>
 <tr>
-<td>status_tunjangan</td>
+<td><span class="style1">Status Tunjangan</span></td>
 <td>
 <select name="status_tunjangan" id="status_tunjangan">
 	<option <c:if test="${model.status_tunjangan=='Dapat'}"> selected="selected" </c:if> value="Dapat">Dapat</option>

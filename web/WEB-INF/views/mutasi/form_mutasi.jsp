@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form Mutasi">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Mutasi </th>
+<th colspan="2" class="odd" scope="col">FORM MUTASI </th>
 </tr>
 </thead>
 <tbody>
@@ -16,21 +16,21 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>no_sk_mutasi</td>
+<td><span class="style1">No.SK Mutasi</span></td>
 <td>
 <input name="no_sk_mutasi" type="text" id="no_sk_mutasi" value="${model.no_sk_mutasi}"/>
 ${no_sk_mutasi_error}
 </td>
 </tr>
 <tr>
-<td>tmt_mutasi</td>
+<td><span class="style1">TMT Mutasi</span></td>
 <td>
 <input name="tmt_mutasi" type="text" id="tmt_mutasi" value="${model.tmt_mutasi}"/>
 <script>
@@ -58,35 +58,35 @@ ${no_sk_mutasi_error}
 </td>
 </tr>
 <tr>
-<td>tujuan_mutasi</td>
+<td><span class="style1">Tujuan Mutasi</span></td>
 <td>
 <input name="tujuan_mutasi" type="text" id="tujuan_mutasi" value="${model.tujuan_mutasi}"/>
 ${tujuan_mutasi_error}
 </td>
 </tr>
 <tr>
-<td>jenis_mutasi</td>
+<td><span class="style1">Jenis Mutasi</span></td>
 <td>
 <input name="jenis_mutasi" type="text" id="jenis_mutasi" value="${model.jenis_mutasi}"/>
 ${jenis_mutasi_error}
 </td>
 </tr>
 <tr>
-<td>pejabat_berwenang</td>
+<td><span class="style1">Pejabat Berwenang</span></td>
 <td>
 <input name="pejabat_berwenang" type="text" id="pejabat_berwenang" value="${model.pejabat_berwenang}"/>
 ${pejabat_berwenang_error}
 </td>
 </tr>
 <tr>
-<td>tempat_mutasi</td>
+<td><span class="style1">Tempat Mutasi</span></td>
 <td>
 <input name="tempat_mutasi" type="text" id="tempat_mutasi" value="${model.tempat_mutasi}"/>
 ${tempat_mutasi_error}
 </td>
 </tr>
 <tr>
-<td>tgl_mutasi</td>
+<td><span class="style1">Tgl Mutasi</span></td>
 <td>
 <input name="tgl_mutasi" type="text" id="tgl_mutasi" value="${model.tgl_mutasi}"/>
 <script>

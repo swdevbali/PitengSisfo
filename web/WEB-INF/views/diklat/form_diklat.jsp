@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form Diklat">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Diklat </th>
+<th colspan="2" class="odd" scope="col">FORM DIKLAT </th>
 </tr>
 </thead>
 <tbody>
@@ -16,35 +16,35 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>nama_diklat</td>
+<td><span class="style1">Nama Diklat</span></td>
 <td>
 <input name="nama_diklat" type="text" id="nama_diklat" value="${model.nama_diklat}"/>
 ${nama_diklat_error}
 </td>
 </tr>
 <tr>
-<td>tempat</td>
+<td><span class="style1">Tempat Diklat</span></td>
 <td>
 <input name="tempat" type="text" id="tempat" value="${model.tempat}"/>
 ${tempat_error}
 </td>
 </tr>
 <tr>
-<td>penyelenggara</td>
+<td><span class="style1">Penyelenggara</span></td>
 <td>
 <input name="penyelenggara" type="text" id="penyelenggara" value="${model.penyelenggara}"/>
 ${penyelenggara_error}
 </td>
 </tr>
 <tr>
-<td>tgl_mulai</td>
+<td><span class="style1">Tgl Mulai</span></td>
 <td>
 <input name="tgl_mulai" type="text" id="tgl_mulai" value="${model.tgl_mulai}"/>
 <script>
@@ -72,7 +72,7 @@ ${penyelenggara_error}
 </td>
 </tr>
 <tr>
-<td>tgl_selesai</td>
+<td><span class="style1">Tgl Selesai</span></td>
 <td>
 <input name="tgl_selesai" type="text" id="tgl_selesai" value="${model.tgl_selesai}"/>
 <script>
@@ -100,14 +100,14 @@ ${penyelenggara_error}
 </td>
 </tr>
 <tr>
-<td>no_sttpl</td>
+<td><span class="style1">No.STTPL</span></td>
 <td>
 <input name="no_sttpl" type="text" id="no_sttpl" value="${model.no_sttpl}"/>
 ${no_sttpl_error}
 </td>
 </tr>
 <tr>
-<td>tgl_sttpl</td>
+<td><span class="style1">Tgl STTPL</span></td>
 <td>
 <input name="tgl_sttpl" type="text" id="tgl_sttpl" value="${model.tgl_sttpl}"/>
 <script>
@@ -135,7 +135,7 @@ ${no_sttpl_error}
 </td>
 </tr>
 <tr>
-<td>jumlah_jam</td>
+<td><span class="style1">Jumlah Jam</span></td>
 <td>
 <input name="jumlah_jam" type="text" id="jumlah_jam" value="${model.jumlah_jam}"/>
 ${jumlah_jam_error}
