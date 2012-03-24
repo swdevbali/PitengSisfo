@@ -13,10 +13,10 @@
 
      <c:if test="${user_credential.role=='Administrator'}">
 	 <td>       <strong><a href="<%=Config.base_url%>index/Pendidikan/input/-1">Tambah Data</a> | 
-      
+      </c:if>
          <a href="<%=Config.base_url%>index/Pendidikan/print/print" target="_blank">Cetak</a> |
          <a href="<%=Config.base_url%>index/Pendidikan/print/download">Download</a></strong>  
-       </c:if>
+       
 <table width="100%" id="rounded-corner">
 <thead>
   <tr>

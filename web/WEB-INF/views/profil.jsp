@@ -65,8 +65,8 @@ body,td,th {
       <tr>
         <td class="style1"><div align="justify" class="style3"><span class="style5"><span class="style6"><span class="style8"><span class="style10"><span class="style15"><span class="style15"></span></span></span></span></span></span></div></td>
         <td class="style2"><label>
-          <input type="submit" name="Submit" value="Simpan"><input name="Submit" type="submit" id="Submit" value="Batal"onClick="javascript:history.back(-1);">
-          </label></td>
+          <input type="submit" name="Submit" value="Simpan">
+        </label></td>
       </tr>
     </table>
   </div>

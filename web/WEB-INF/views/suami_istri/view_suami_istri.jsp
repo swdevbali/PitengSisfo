@@ -17,7 +17,10 @@
   
   <span class="style10"><a href="<%=Config.base_url%>index/SuamiIstri/input/-1">Tambah Data</a> |
   </c:if>
-  </span>  <span class="style10"><a href="<%=Config.base_url%>index/SuamiIstri/print/print" target="_blank">Cetak</a> |<a href="<%=Config.base_url%>  index/SuamiIstri/print/download">Download</a></span> 
+  </span>  <span class="style10">
+  		<a href="<%=Config.base_url%>index/SuamiIstri/print/print" target="_blank">Cetak</a> |
+ 		<a href="<%=Config.base_url%>index/SuamiIstri/print/download">Download</a></span>
+		 
   
 <table width="100%" id="rounded-corner">
 <thead>
