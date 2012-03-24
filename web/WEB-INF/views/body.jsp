@@ -18,13 +18,9 @@ body {
     <tr>
    <td width="9%" rowspan="2" align="left" valign="top"><p>&nbsp;</p>
     </td>
-      <td height="24" valign="top"><div align="center"><span class="style1">
-        <div align="center" class="style1"><marquee class="style28 style34">
-<span class="style35">
-<div align="center"><span class="style25">Selamat Datang  ${user_credential.role}
-  </span>
-</div>
-<marquee/> 
+      <td height="24" valign="top">
+	  <div align="center">Selamat Datang  ${user_credential.role}</div>
+
 	      </table>
           </c:if>
         

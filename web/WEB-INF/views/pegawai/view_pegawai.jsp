@@ -20,7 +20,7 @@ DateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
 .style16 {font-size: 14px; font-family: Arial, Helvetica, sans-serif; }
 -->
 </style>
-
+<c:if test="user_credential.role=='Administrator'">
 <form action="<%=Config.base_url%>index/Pegawai/search" method="post">
   <div align="center">Cari berdasarkan<span class="style4"> 
     <select name="search_criteria">
@@ -62,7 +62,7 @@ DateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
     <input name="search_submit" type="submit" value="Cari"/>
     </span></div>
 </form>
-
+</c:if>
 <c:if test="${user_credential.role=='Administrator'}">
   <p class="style4">
   <p class="style4"><span class="style11"><a href="<%=Config.base_url%>index/Pegawai/input/-1">Tambah Data</a> | 
@@ -92,7 +92,7 @@ DateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
   <th class="rounded-q1 style4" scope="col"><p align="center">Tgl </p>
     <p align="center">Lahir</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Jenis</p>
-    <p align="center">Kelaminkel</p></th>
+    <p align="center">Kelamin</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Agama</div></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Golongan</p>
     <p align="center">Darah</p></th>
@@ -102,23 +102,14 @@ DateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
     <p align="center">terakhir</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Status</p>
     <p align="center"> Pegawai</p></th>
-  <th class="rounded-q1 style4" scope="col"><p align="center">TMT </p>
-    <p align="center">Pangkat</p></th>
-  <th class="rounded-q1 style4" scope="col"><p align="center">No.SK</p>
-    <p align="center"> Pangkat</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Tgl Mulai</p>
     <p align="center">Kerja</p></th>
-  <th class="rounded-q1 style4" scope="col"><p align="center">Pejabat </p>
-    <p align="center">Berwenang</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Bagian </p>
     <p align="center">Unit Kerja</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Sub</p>
     <p align="center"> Unit Kerja</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Pangkat/Gol</p></th>
-  <th class="rounded-q1 style4" scope="col"><p align="center">No.KTP</p></th>
   <th class="rounded-q1 style4" scope="col"><p align="center">Alamat KTP</p></th>
-  <th class="rounded-q1 style4" scope="col"><p align="center">Alamat  </p>
-  <p align="center">Domisili</p></th>
   <!--  <th scope="col" class="rounded-q1">Alamat KTP</th>-->
   <th class="style6 style4 rounded-q4" scope="col"><p align="center"><strong>Aksi</strong></p></th>
   </tr>
@@ -147,17 +138,12 @@ DateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
 	  <td><span class="style4">${item.status_perkawinan}</span></p></td>
 	  <td><span class="style4">${item.pendidikan_terakhir}</span></p></td>
 	  <td><span class="style4">${item.status_kepegawaian}</span></p></td>
-	  <td><span class="style4">${item.pangkat_golongan_ruang}</span></p></td>
-	  <td><span class="style4">${item.tmt_pangkat}</span></p></td>
-	  <td><span class="style4">${item.no_sk}</span></p></td>
 	  <td><span class="style4">${item.tgl_mulai_kerja}</span></p></td>
-	  <td><span class="style4">${item.pejabat_berwenang}</span></p></td>
-      <td><span class="style4">${item.bagian_unit_kerja}</span></p></td>
+	  <td><span class="style4">${item.bagian_unit_kerja}</span></p></td>
       <td><span class="style4">${item.sub_unit_kerja}</span></p></td>
-	  <td><span class="style4">${item.no_ktp}</span></p></td>
+      <td><span class="style4">${item.pangkat_golongan_ruang}</span></p></td>
 	  <td><span class="style4">${item.alamat_ktp}</span></p></td>
-	  <td><span class="style4">${item.alamat_domisili}</span></p></td>
-     <!-- <td>${item.alamat_ktp}</td>-->
+	  <!-- <td>${item.alamat_ktp}</td>-->
         <td><span class="style9">
 <c:if test="${user_credential.role=='Administrator'}">	      </c:if>
 	    </span><span class="style11">

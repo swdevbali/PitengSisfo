@@ -13,6 +13,7 @@ public class Prajabatan extends _Prajabatan {
         PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
         Model model = initModel();
         sqlViewDataPerPage = "select * from " + model.getTableName() + " where nip='" + pegawaiTerpilih.getNip() + "'";
+        sqlViewDataPerPageForReport = "select NIP,tgl_sttpl as `Tgl STTPL` from " + model.getTableName() + " where nip='" + pegawaiTerpilih.getNip() + "'";
 
     }
 }

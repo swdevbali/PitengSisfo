@@ -27,7 +27,7 @@ body,td,th {
   <div align="center">
     <h1><br />
   
-    </a><span class="style12">Hak Cipta (C)Piteng Uropdana</span></span><span class="style1"></a></span><span class="style12">
+    </a>Hak Cipta (C)Piteng Uropdana</a><span class="style12">
 	<a href="<%=Config.base_url %>index/About"><%=Config.author%></a></a></span><span class="style13"></span><span class="style9">
 	<a href="<%=Config.base_url %>index/About" class="style2"><%=Config.production_year%> 
     </a>

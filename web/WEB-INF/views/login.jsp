@@ -48,7 +48,7 @@ body {
   <br />
   </span>
 <table width="43%" height="30
-0" border="1" align="center" cellpadding="1" cellspacing="1" bordercolor="#FF9900" background="../../upload/images1.jpeg" bgcolor="">
+0" border="1" align="center" cellpadding="1" cellspacing="1" bordercolor="#FF9900" background="<%=Config.base_url%>upload/images1.jpeg" bgcolor="">
   <tr>
   <td height="20" colspan="2" valign="top" ><marquee>
   </marquee><div align="center" class="style41"><em>Silahkan Masukkan Usrname dan Password </em><em>Anda</em></div>
@@ -58,9 +58,9 @@ body {
    <td width="389" height="127" align="center" valign="top" bordercolor="#000000" >
    <form action="<%=Config.base_url%>index/login/doLogin" method="post">
         <div align="center"><br/>
-          <table width="72%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFF22" background="../../upload/images1.jpeg">
+          <table width="72%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFF22" background="<%=Config.base_url%>upload/images1.jpeg">
             <tr>
-              <td><table width="71%" border="0" align="center" bordercolor="#FFFFFF" background="../../upload/images1.jpeg" bgcolor="#CC9900">
+              <td><table width="71%" border="0" align="center" bordercolor="#FFFFFF" background="<%=Config.base_url%>upload/images1.jpeg" bgcolor="#CC9900">
                 <tr>
                   <td>&nbsp;</td>
                   <td colspan="2" rowspan="2">&nbsp;</td>

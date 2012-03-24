@@ -15,6 +15,7 @@ public class KursusPenataran extends _KursusPenataran
        PegawaiModel pegawaiTerpilih = (PegawaiModel) request.getSession().getAttribute("pegawai_terpilih");
         Model model = initModel();
         sqlViewDataPerPage = "select * from " + model.getTableName() +" where nip='" + pegawaiTerpilih.getNip() + "'";
+        sqlViewDataPerPageForReport = "select NIP, Jenis from " + model.getTableName() +" where nip='" + pegawaiTerpilih.getNip() + "'";
         
     }
       

@@ -24,81 +24,80 @@
     <embed src="<%=Config.base_url%>Movie1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1050" height="120"></embed>
   </object>
   <ul class="topnav style15">  
-  <li><a href="<%=Config.base_url%>">HOME</a></li>  
   <c:if test="${user_credential.role=='Administrator'}">
+	  <li><a href="<%=Config.base_url%>">HOME</a></li>  
     <%@ include file="nav_admin.jsp" %>
-  </c:if>
-  <c:if test="${user_credential.role=='Pegawai'}">
-    <%@ include file="nav_pegawai.jsp" %>
-      </li>     
-  </c:if>
   <li><a href="<%=Config.base_url%>index/login/doLogout">LOGOUT</a></li> 
   <li><a href="#" class=" style15">[${user_credential.nip} ~ ${user_credential.role}]</a></li>
+	
+  </c:if>
+  <c:if test="${user_credential.role=='Pegawai'}">
+      <li><a href="<%=Config.base_url%>">HOME</a></li>  
+
+	<%@ include file="nav_pegawai.jsp" %>
+	  <li><a href="<%=Config.base_url%>index/login/doLogout">LOGOUT</a></li> 
+  <li><a href="#" class=" style15">[${user_credential.nip} ~ ${user_credential.role}]</a></li>
+  </c:if>
 </ul>  
 </div>
 <c:if test="${pegawai_terpilih_nip!=null}">
 <ol class="style15" id="tab_toc">
-    <li 
-    
-     <c:if test="${active_controller=='Anak'}"> class="current" </c:if>
+    <li <c:if test="${active_controller=='SuamiIstri'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/SuamiIstri">Pasangan</a>
     </li>
     <li 
     
     
-    <c:if test="${active_controller=='Diklat'}"> class="current" </c:if>
+    <c:if test="${active_controller=='Anak'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/Anak">Anak</a>
     </li>
-    <li 
-    
-    <c:if test="${active_controller=='SuamiIstri'}"> class="current" </c:if>
+	
+    <li <c:if test="${active_controller=='Prajabatan'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/Prajabatan">Prajabatan</a>
     </li>
-    <li 
-    
-    <c:if test="${active_controller=='Pensiun'}"> class="current" </c:if>
+	
+    <li <c:if test="${active_controller=='Pendidikan'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/Pendidikan">Pendidikan</a>
     </li>
-    <li 
     
-    
-    <c:if test="${active_controller=='Cuti'}"> class="current" </c:if>
+	<li <c:if test="${active_controller=='Diklat'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/Diklat">Diklat</a>
     </li>
-    <li 
     
+	<li
     <c:if test="${active_controller=='Jabatan'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/Jabatan">Jabatan</a>
     </li>
-    <li 
     
-    <c:if test="${active_controller=='NaikPangkat'}"> class="current" </c:if>
+	<li <c:if test="${active_controller=='NaikPangkat'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/NaikPangkat">Naik Pangkat</a>
     </li>
-    <li 
     
-    <c:if test="${active_controller=='KursusPenataran'}"> class="current" </c:if>
+	<li <c:if test="${active_controller=='KursusPenataran'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/KursusPenataran">Kursus/Penataran</a>
     </li>
+	
     <li 
     
-    <c:if test="${active_controller=='Pendidikan'}"> class="current" </c:if>
-    ><a href="<%=Config.base_url%>index/Pendidikan"><a href="<%=Config.base_url%>index/Cuti">Cuti</a></a>
+    <c:if test="${active_controller=='Cuti'}"> class="current" </c:if>>
+	<a href="<%=Config.base_url%>index/Cuti">Cuti</a></a>
     </li>
     <li 
     
-    <c:if test="${active_controller=='Prajabatan'}"> class="current" </c:if>
-    ><a href="<%=Config.base_url%>index/Prajabatan"><a href="<%=Config.base_url%>index/Mutasi">Mutasi</a>
+    <c:if test="${active_controller=='Mutasi'}"> class="current" </c:if>>
+	<a href="<%=Config.base_url%>index/Mutasi">Mutasi</a>
     </li>
     </a>
     </li>
     <li 
     
-    <c:if test="${active_controller=='Mutasi'}"> class="current" </c:if>
+    <c:if test="${active_controller=='Pensiun'}"> class="current" </c:if>
     ><a href="<%=Config.base_url%>index/Pensiun">Pensiun</a>  
     	
 	
 </ol>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -113,10 +112,12 @@
   <td bgcolor="#FFCC00"><div align="center" class="style14">:</div></td>
   <td bgcolor="#FFCC00"><span class="style14">${pegawai_terpilih.nama_pegawai}</span></td>
 </tr>
+<c:if test="${user_credential.role=='Administrator'}">
 <tr>
   <td colspan="2">
     <p align="left"><a href="<%=Config.base_url%>index/Pegawai/chooseAnother" class="style12 style15 style16">Pilih pegawai yang lain</a> </p></td>
 </tr>
+</c:if>
 </table>
 </c:if>
 
