@@ -21,7 +21,23 @@ body {
       <td height="24" valign="top">
 	  <div align="center">Selamat Datang  ${user_credential.role}</div>
 
+	      <table width="100%" border="0">
+            <tr>
+              <td width="32%" valign="top"><img src="<%=Config.base_url%>upload/animasi1.gif" alt="d" /></td>
+              <td width="68%" rowspan="4" valign="top"><h1>Sistem Informasi </h1>
+              <p>Sistem ini.. </p></td>
+            </tr>
+            <tr valign="top">
+              <td><img src="<%=Config.base_url%>upload/animasi2.gif" alt="d" /></td>
+            </tr>
+            <tr valign="top">
+              <td><img src="<%=Config.base_url%>upload/animasi3.gif" alt="d" /></td>
+            </tr>
+            <tr valign="top">
+              <td><img src="<%=Config.base_url%>upload/animasi4.gif" alt="d" /></td>
+            </tr>
+          </table>
 	      </table>
-          </c:if>
+</c:if>
         
     
