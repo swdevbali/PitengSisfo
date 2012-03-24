@@ -42,7 +42,7 @@ CREATE TABLE `anak` (
   KEY `FK_Nip` (`nip`),
   KEY `anak_ibfk_1` (`nip`),
   CONSTRAINT `anak_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `anak`
@@ -52,11 +52,19 @@ CREATE TABLE `anak` (
 INSERT INTO `anak` (`idanak`,`nip`,`anak_ke`,`nama_anak`,`status_anak`,`tempat_lahir`,`tgl_lahir`,`jenis_kelamin`,`pendidikan`,`pekerjaan`,`status_tunjangan`) VALUES 
  (1,'195607121977031005',3,'alkautsar','Anak Kandung','','1980-01-01','Pria','SD','','Dapat'),
  (3,'195607121977031005',2,'alkahfi','Anak Kandung','','1980-01-01','Pria','SD','','Dapat'),
- (4,'195504091977031004',1,'alfath','Anak Kandung','','1980-01-01','Pria','SD','','Dapat'),
+ (4,'195504091974589704',1,'alfath','Anak Kandung','','1980-01-01','Pria','SD','','Dapat'),
  (5,'195607121977031005',3,'Al-Kautsar','Anak Kandung','Yogyakarta','1980-01-01','Pria','SD','pelajar','Dapat'),
- (6,'195504091977031004',2,'eee','Anak Kandung','ww','1980-01-01','Pria','SD','w','Dapat'),
+ (6,'195504091974589704',2,'eee','Anak Kandung','ww','1980-01-01','Pria','SD','w','Dapat'),
  (7,'195511281979031005',1,'Rudy','Anak Kandung','Bantul','1980-01-01','Pria','SMA','Pelajar','Dapat'),
- (8,'195511281979031005',2,'Rusmina','Anak Kandung','Kasihan Bantul','1980-03-06','Wanita','SMP','Pelajar','Dapat');
+ (8,'195511281979031005',2,'Rusmina','Anak Kandung','Kasihan Bantul','1980-03-06','Wanita','SMP','Pelajar','Dapat'),
+ (9,'197203042006042014',1,'Andy','Anak Kandung','Sleman','1991-01-24','Pria','SD','Pelajar','Dapat'),
+ (10,'197203042006042014',2,'Siska','Anak Kandung','Sleman','1996-02-21','Wanita','SD','Pelajar','Dapat'),
+ (11,'196009272006041004',1,'Budi','Anak Kandung','Bantul','1980-01-01','Pria','SMP','Pelajar','Dapat'),
+ (12,'195602011980011002',1,'Supri','Anak Kandung','Bantul','1995-02-10','Wanita','SMP','Pelajar','Dapat'),
+ (13,'195602011980011002',2,'Wawan','Anak Kandung','Bantul','1998-01-01','Pria','SMP','Pelajar','Dapat'),
+ (14,'987655433355671245',1,'Susi','Anak Kandung','Bantul','1989-01-01','Wanita','D-II','PNS','Dapat'),
+ (15,'987655433355671245',2,'Dedy','Anak Kandung','Bantul','2003-01-01','Pria','SMA','Pelajar','Dapat'),
+ (16,'195504091974589704',3,'Dilham','Anak Kandung','Bantul','1980-01-01','Pria','SD','','Dapat');
 /*!40000 ALTER TABLE `anak` ENABLE KEYS */;
 
 
@@ -105,7 +113,7 @@ CREATE TABLE `cuti` (
   KEY `Nip` (`nip`),
   KEY `cuti_ibfk_1` (`nip`),
   CONSTRAINT `cuti_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `cuti`
@@ -115,10 +123,18 @@ CREATE TABLE `cuti` (
 INSERT INTO `cuti` (`idcuti`,`nip`,`jenis_cuti`,`no_surat_ijin_cuti`,`tgl_surat_ijin_cuti`,`tgl_awal_cuti`,`tgl_akhir_cuti`,`pejabat_berwenang`) VALUES 
  (1,'195607121977031005','Cuti Tahunan','','1980-01-01','1980-01-01','1980-01-01',''),
  (2,'195607121977031005','Cuti Tahunan','222','1980-01-01','1980-01-01','1980-01-01','222'),
- (3,'195504091977031004','Cuti Tahunan','01/BKD/2012','1980-01-01','1980-01-01','1980-01-01','Lukas'),
- (4,'195504091977031004','Cuti Sakit','02/BKD/2011','1980-01-02','1980-01-15','1980-01-29','Lukas'),
+ (3,'195504091974589704','Cuti Tahunan','01/BKD/2012','1980-01-01','1980-01-01','1980-01-01','Lukas'),
+ (4,'195504091974589704','Cuti Sakit','02/BKD/2011','1980-01-02','1980-01-15','1980-01-29','Lukas'),
  (5,'195511281979031005','Cuti Sakit','01/BKD/1980','1980-01-01','1980-01-01','1980-01-01','Rudy'),
- (6,'195511281979031005','Cuti Tahunan','01/BKD/1982','1980-01-01','1980-01-01','1980-01-01','Risman');
+ (6,'195511281979031005','Cuti Tahunan','01/BKD/1982','1980-01-01','1980-01-01','1980-01-01','Risman'),
+ (7,'195602011980011002','Cuti Tahunan','01/CT/BKD/V/1995','1995-02-09','1995-02-09','1996-02-09','Dr.Dody Irnawan'),
+ (8,'195602011980011002','Cuti Tahunan','02/CT/BKD/V/1998','1998-01-01','1998-01-01','1999-01-01','Dr.Dody Irnawan'),
+ (9,'195602011980011002','Cuti Sakit','03/CT/BKD/V/1997','1997-01-01','1997-01-01','1997-03-03','Dra.Sarah'),
+ (10,'987655433355671245','Cuti Sakit','01/BKDC/2000','1980-01-01','1980-01-01','1980-01-01','Drs.Maman P'),
+ (11,'987655433355671245','Cuti Tahunan','02/BKDC/2003','1980-01-01','1980-01-01','1980-01-01','Drs.Maman P'),
+ (12,'987655433355671245','Cuti Alasan Penting','346/BDK/2000','1980-01-01','1980-01-01','1980-01-01','Drs.Maman P'),
+ (13,'196009272006041004','Cuti Sakit','01/CT/BKD/V/1995','1980-01-01','1980-01-01','1980-01-01','Drs.Maman P'),
+ (14,'196009272006041004','Cuti Tahunan','02/CT/BKD/V/1998','1980-01-01','1980-01-01','1980-01-01','Drs.Maman P');
 /*!40000 ALTER TABLE `cuti` ENABLE KEYS */;
 
 
@@ -142,7 +158,7 @@ CREATE TABLE `diklat` (
   KEY `FK_pegawai_riwayat_pendidikan_dan_pelatihan_fungsional_1` (`nip`),
   KEY `diklat_ibfk_1` (`nip`),
   CONSTRAINT `diklat_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `diklat`
@@ -150,12 +166,17 @@ CREATE TABLE `diklat` (
 
 /*!40000 ALTER TABLE `diklat` DISABLE KEYS */;
 INSERT INTO `diklat` (`iddiklat`,`nip`,`nama_diklat`,`tempat`,`penyelenggara`,`tgl_mulai`,`tgl_selesai`,`no_sttpl`,`tgl_sttpl`,`jumlah_jam`) VALUES 
- (1,'195504091977031004','PELATIHAN PELATIH PDT','Balai Diklat Bantul','BKD Bantul','1980-01-01','1980-01-25','01/VI/2012','1980-01-01',25),
+ (1,'195504091974589704','PELATIHAN PELATIH PDT','Balai Diklat Bantul','BKD Bantul','1980-01-01','1980-01-25','01/VI/2012','1980-01-01',25),
  (2,'195607121977031005','test','test','test','1980-01-01','1980-01-01','test','1980-01-01',11),
  (3,'195607121977031005','diklat ke-2','keren','masuk','1980-01-01','1980-01-01','bagus','1980-01-01',20),
  (4,'195511281979031005','DIKLATPIM TK. III','Bantul','BKD Bantul','1980-01-01','1980-01-14','2564','1980-01-14',14),
  (5,'195511281979031005','DIKLATPIM TK. IV','Balai Diklat Bantul','BKD Bantul','1980-02-01','1980-02-20','089','1980-02-20',20),
- (6,'195504091977031004','LATIHAN PELATIHAN KADER Pembangunan DESA','Balai Diklat Bantul','BKD Bantul','1980-01-01','1980-01-01','02/BKD/2012','1980-01-01',28);
+ (6,'195504091974589704','LATIHAN PELATIHAN KADER Pembangunan DESA','Balai Diklat Bantul','BKD Bantul','1980-01-01','1980-01-01','02/BKD/2012','1980-01-01',28),
+ (7,'195602011980011002','PIM-IV','Balai Diklat Bantul','Pemda Bantul','2000-02-06','2000-04-04','01/BKD/PIM/IV/2000','2000-04-04',400),
+ (8,'195602011980011002','Diklat DPM','Balai Diklat Bantul','BKD Bantul','2001-02-06','2001-02-28','02/BKD/DPM/2001','2001-02-28',200),
+ (9,'195504091974589704','ffdff','ggs','sssssssssssssss','1980-01-01','1980-01-01','sgg','1980-01-01',6),
+ (10,'987655433355671245','Diklatpim I','Bantul','BKD Bantul','1980-01-01','1980-01-01','','1980-01-01',48),
+ (11,'196009272006041004','PIM III','Balai Diklat DIY','','1980-01-01','1980-01-01','','1980-01-01',300);
 /*!40000 ALTER TABLE `diklat` ENABLE KEYS */;
 
 
@@ -188,7 +209,7 @@ CREATE TABLE `jabatan` (
   CONSTRAINT `jabatan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `jabatan_ibfk_2` FOREIGN KEY (`kode_sub_unit_kerja`) REFERENCES `sub_unit_kerja` (`kode_sub_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `jabatan_ibfk_3` FOREIGN KEY (`kode_bagian_unit_kerja`) REFERENCES `bagian_unit_kerja` (`kode_bagian_unit_kerja`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `jabatan`
@@ -198,10 +219,13 @@ CREATE TABLE `jabatan` (
 INSERT INTO `jabatan` (`idjabatan`,`nip`,`nama_jabatan`,`jenis_Jabatan`,`eselon`,`unit_kerja`,`kode_sub_unit_kerja`,`tmt_jabatan`,`no_sk_jabatan`,`tgl_sk_jabatan`,`no_surat_pelantikan`,`tgl_surat_pelantikan`,`pejabat_berwenang`,`kode_bagian_unit_kerja`) VALUES 
  (1,'195607121977031005','apa','Struktural','i','Badan Kepegawaian','SBM','1980-01-01','1','1980-01-01','1','1980-01-01','1','BS'),
  (2,'195607121977031005','22','Fungsional Tertentu','222','Badan Kepegawaian','SBM','1980-01-01','22','1980-01-01','22','1980-01-01','22','BPP'),
- (3,'195504091977031004','KABAG KEUANGAN','Struktural','III','Badan Kepegawaian','SBU','1980-01-01','01/VI/BKD/2011','1980-01-01','01/V/BKD/2012','1980-01-01','WENS','BS'),
- (4,'195504091977031004','Kepala Operasional','Struktural dan Fungsional Tertentu (Rangkap)','III','Badan Kepegawaian','SBKA','1980-01-01','02/VII/BKD/2012','1980-01-01','01/V/BKD/2012','1980-01-01','Wens','BAK'),
+ (3,'195504091974589704','KABAG KEUANGAN','Struktural','III','Badan Kepegawaian','SBU','1980-01-01','01/VI/BKD/2011','1980-01-01','01/V/BKD/2012','1980-01-01','WENS','BS'),
+ (4,'195504091974589704','Kepala Operasional','Struktural dan Fungsional Tertentu (Rangkap)','III','Badan Kepegawaian','SBKA','1980-01-01','02/VII/BKD/2012','1980-01-01','01/V/BKD/2012','1980-01-01','Wens','BAK'),
  (5,'195511281979031005','Kepala Operasional','Struktural','kkll','Badan Kepegawaian','SBP','1980-01-01','03/Peg/D.4/2010 tgl 14 Jan 2010','1980-01-01','01/V/BKD/1980','1980-01-01','Rudy','BS'),
- (6,'195511281979031005','Kepala Seksi Sarana dan Prasarana','Struktural','III','Badan Kepegawaian','SBU','1980-01-01','03/Peg/D.4/2010 tgl 14 Jan 2010','1980-01-01','01/V/BKD/1980','1980-01-01','Rudy','Kabag');
+ (6,'195511281979031005','Kepala Seksi Sarana dan Prasarana','Struktural','III','Badan Kepegawaian','SBU','1980-01-01','03/Peg/D.4/2010 tgl 14 Jan 2010','1980-01-01','01/V/BKD/1980','1980-01-01','Rudy','Kabag'),
+ (7,'195602011980011002','Kepala Sub bagian Administrasi','Struktural dan Fungsional Tertentu (Rangkap)','III','Badan Kepegawaian','SBKA','1980-01-01','','1980-01-01','','1980-01-01','','BAK'),
+ (10,'196009272006041004','HUMAS','Struktural','III','Badan Kepegawaian','SBU','1980-01-01','','1980-01-01','','1980-01-01','LUSY','Kabag'),
+ (11,'196009272006041004','hUMM','Struktural','VI','Badan Kepegawaian','SBM','1980-01-01','','1980-01-01','','1980-01-01','','BPP');
 /*!40000 ALTER TABLE `jabatan` ENABLE KEYS */;
 
 
@@ -226,7 +250,7 @@ CREATE TABLE `kursus_penataran` (
   KEY `FK_Nip` (`nip`),
   KEY `kursus_penataran_ibfk_1` (`nip`),
   CONSTRAINT `kursus_penataran_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kursus_penataran`
@@ -236,10 +260,14 @@ CREATE TABLE `kursus_penataran` (
 INSERT INTO `kursus_penataran` (`idkursus_penataran`,`nip`,`nama_kursus_penataran`,`tempat`,`penyelenggara`,`tgl_mulai`,`tgl_selesai`,`no_sertifikat`,`tgl_sertifikat`,`jumlah_jam`,`jenis`) VALUES 
  (1,'195607121977031005','kkk','kk','k','1980-01-01','1980-01-01','','1980-01-01',90,'Penataran'),
  (2,'195607121977031005','11','11','11','1980-01-01','1980-01-01','11','1980-01-01',22,'Kursus'),
- (3,'195504091977031004','Komputer','Smile Group','Kepegawaian','1980-01-01','1980-01-01','026758','1980-01-01',48,'Kursus'),
- (4,'195504091977031004','Penatran Diploma','Diklat Jogja','Pemda Bantul','1980-01-01','1980-01-01','07849483','1980-01-01',59,'Penataran'),
+ (3,'195504091974589704','Komputer','Smile Group','Kepegawaian','1980-01-01','1980-01-01','026758','1980-01-01',48,'Kursus'),
+ (4,'195504091974589704','Penatran Diploma','Diklat Jogja','Pemda Bantul','1980-01-01','1980-01-01','07849483','1980-01-01',59,'Penataran'),
  (5,'195511281979031005','PELATIHAN COMPUTER','BTC','BKD Bantul','1980-01-01','1980-01-01','234','1980-01-01',40,'Kursus'),
- (6,'195511281979031005','LATIHAN PELATIHAN KADER Pembangunan DESA','Balai Diklat Bantul','BKD Bantul','1980-01-01','1980-01-01','321','1980-01-01',48,'Penataran');
+ (6,'195511281979031005','LATIHAN PELATIHAN KADER Pembangunan DESA','Balai Diklat Bantul','BKD Bantul','1980-01-01','1980-01-01','321','1980-01-01',48,'Penataran'),
+ (7,'195602011980011002','MS.Office 2000','Smile Grop','BKD Bantul','1980-01-01','1980-01-01','029','1980-01-01',48,'Kursus'),
+ (8,'987655433355671245','MS Office 2000','Smile Group','BKD Bantul','1980-01-01','1980-01-01','','1980-01-01',32,'Kursus'),
+ (9,'987655433355671245','Desain Grafis','BTC Jogja','BKD Bantul','1980-01-01','1980-01-01','','1980-01-01',56,'Kursus'),
+ (10,'196009272006041004','MS.Office 2000','BTC Jogja','BKD Bantul','1980-01-01','1980-01-01','','1980-01-01',46,'Kursus');
 /*!40000 ALTER TABLE `kursus_penataran` ENABLE KEYS */;
 
 
@@ -262,7 +290,7 @@ CREATE TABLE `mutasi` (
   KEY `FK_Nip` (`nip`),
   KEY `mutasi_ibfk_1` (`nip`),
   CONSTRAINT `mutasi_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `mutasi`
@@ -272,10 +300,12 @@ CREATE TABLE `mutasi` (
 INSERT INTO `mutasi` (`idmutasi`,`nip`,`no_sk_mutasi`,`tmt_mutasi`,`tujuan_mutasi`,`jenis_mutasi`,`pejabat_berwenang`,`tempat_mutasi`,`tgl_mutasi`) VALUES 
  (1,'195607121977031005','jjjj','1980-01-01','','','','','1980-01-01'),
  (2,'195607121977031005','12','1980-01-01','11','11','11','11','1980-01-01'),
- (3,'195504091977031004','01/V/BKD/BM/2011','1980-01-01','Pindah','Tugas','Lukas','bagian Keuangan','1980-01-01'),
- (4,'195504091977031004','01/VI/BKD/BM/2012','1980-01-01','Tugas','Pindah','Lukas','Bagian Administrasi','1980-01-01'),
+ (3,'195504091974589704','01/V/BKD/BM/2011','1980-01-01','Pindah','Tugas','Lukas','bagian Keuangan','1980-01-01'),
+ (4,'195504091974589704','01/VI/BKD/BM/2012','1980-01-01','Tugas','Pindah','Lukas','Bagian Administrasi','1980-01-01'),
  (5,'195511281979031005','01/V/BKD/BM/2011','1980-01-01','Pindah','Pindah Tugas','Rudy','bagian Keuangan','1980-01-01'),
- (6,'195511281979031005','01/VI/BKD/BM/2012','1980-01-01','Tugas','Pindah Tugas','Rismanudin','Bagian Administrasi','1980-01-01');
+ (6,'195511281979031005','01/VI/BKD/BM/2012','1980-01-01','Tugas','Pindah Tugas','Rismanudin','Bagian Administrasi','1980-01-01'),
+ (7,'195602011980011002','','1980-01-01','Pindah Tugas','','Drs.Maman Permana','Bagian Keuangan','1980-01-01'),
+ (8,'196009272006041004','01/SM/BKD/2000','1980-01-01','Pindah Tugas','Pindahan','Drs. Maman P','Bagian keuangan','1980-01-01');
 /*!40000 ALTER TABLE `mutasi` ENABLE KEYS */;
 
 
@@ -298,7 +328,7 @@ CREATE TABLE `naik_pangkat` (
   PRIMARY KEY (`idpangkat`),
   KEY `naik_pangkat_ibfk_1` (`nip`),
   CONSTRAINT `naik_pangkat_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `naik_pangkat`
@@ -306,13 +336,15 @@ CREATE TABLE `naik_pangkat` (
 
 /*!40000 ALTER TABLE `naik_pangkat` DISABLE KEYS */;
 INSERT INTO `naik_pangkat` (`idpangkat`,`nip`,`jenis_kenaikan_pangkat`,`kenaikan_pangkat_pilihan`,`tmt_Pangkat`,`gaji_pokok`,`no_sk_pangkat`,`tgl_sk_pangkat`,`pejabat_berwenang`,`nama_pangkat`) VALUES 
- (1,'195607121977031005','Kenaikan Pangkat Pilihan','Menemukan penemuan baru yang bermanfaat bagi negara','1980-01-01',10000,'10101','1980-01-01','eko','apa'),
- (2,'195607121977031005','Kenaikan Pangkat Pilihan','Menduduki jabatan tertentu yang pengangkatannya ditetapkan dengan keputusan presiden','1980-01-01',222,'22','1980-01-01','22','22'),
- (3,'195511281979031005','Kenaikan Pangkat Reguler','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',5000,'03/Peg/D.4/2010/ 14/2010','1980-01-01','Risdy','Golongan III/a'),
- (4,'195607121977031005','Kenaikan Pangkat Pilihan','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',600,'890/bkd/2012','1980-01-01','iki',''),
- (5,'195504091977031004','Kenaikan Pangkat Reguler','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',2000000,'23','1980-01-01','Rismanudin','Golongan III/a'),
- (6,'195504091977031004','Kenaikan Pangkat Pilihan','Menduduki jabatan struktural atau jabatan tertentu','1980-01-09',2500000,'234','1980-01-16','Rismanudin','diploma 1'),
- (7,'195511281979031005','Kenaikan Pangkat Reguler','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',3000000,'03/Peg/D.4/2010/ 14/2010','1980-01-01','Rusdy','Golongan III/a');
+ (101,'195607121977031005','Kenaikan Pangkat Pilihan','Menemukan penemuan baru yang bermanfaat bagi negara','1980-01-01',10000,'10101','1980-01-01','eko','apa'),
+ (102,'195607121977031005','Kenaikan Pangkat Pilihan','Menduduki jabatan tertentu yang pengangkatannya ditetapkan dengan keputusan presiden','1980-01-01',222,'22','1980-01-01','22','22'),
+ (103,'195511281979031005','Kenaikan Pangkat Reguler','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',5000,'03/Peg/D.4/2010/ 14/2010','1980-01-01','Risdy','Golongan III/a'),
+ (104,'195607121977031005','Kenaikan Pangkat Pilihan','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',600,'890/bkd/2012','1980-01-01','iki',''),
+ (105,'195504091974589704','Kenaikan Pangkat Reguler','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',2000000,'23','1980-01-01','Rismanudin','Golongan III/a'),
+ (106,'195504091974589704','Kenaikan Pangkat Pilihan','Menduduki jabatan struktural atau jabatan tertentu','1980-01-09',2500000,'234','1980-01-16','Rismanudin','diploma 1'),
+ (107,'195511281979031005','Kenaikan Pangkat Reguler','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',3000000,'03/Peg/D.4/2010/ 14/2010','1980-01-01','Rusdy','Golongan III/a'),
+ (108,'195602011980011002','Kenaikan Pangkat Pengabdian','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',1500000,'','1980-01-01','Dra.Sarah',''),
+ (109,'196009272006041004','Kenaikan Pangkat Reguler','Menduduki jabatan struktural atau jabatan tertentu','1980-01-01',1250000,'','1980-01-01','Drs.Maman P','');
 /*!40000 ALTER TABLE `naik_pangkat` ENABLE KEYS */;
 
 
@@ -333,7 +365,7 @@ CREATE TABLE `pegawai` (
   `golongan_darah` enum('A','B','AB','O') COLLATE latin1_general_ci DEFAULT NULL,
   `status_perkawinan` enum('Belum Kawin','Kawin','Janda','Duda') COLLATE latin1_general_ci DEFAULT NULL,
   `pendidikan_terakhir` enum('SD','SMP','SMA','D-I','D-II','D-III','S-1','S-2','S-3') COLLATE latin1_general_ci DEFAULT NULL,
-  `status_kepegawaian` enum('CPNS','PNS') COLLATE latin1_general_ci DEFAULT NULL,
+  `status_kepegawaian` enum('CPNS','PNS','Non Aktif') COLLATE latin1_general_ci DEFAULT NULL,
   `pangkat_golongan_ruang` enum('I/a - Juru Muda','I/b - Juru Muda Tk.I','I/c - Juru','I/d - Juru Tk.I','II/a - Pengatur Muda','II/b - Pengatur Muda Tk.I','II/c - Pengatur','II/d - Pegatur Tk.I','III/a - Penata Muda','III/b - Penata Muda Tk.I','III/c - Penata','III/d - Penata Tk.I','IV/a - Pembina','IV/b - Pembina Tk.I','IV/c - Pembina Utama Muda','IV/d - Pembina Utama Madya','IV/e - Pembina Utama') COLLATE latin1_general_ci DEFAULT NULL,
   `tmt_pangkat` date DEFAULT NULL,
   `no_sk` varchar(20) COLLATE latin1_general_ci DEFAULT NULL,
@@ -359,11 +391,14 @@ CREATE TABLE `pegawai` (
 
 /*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;
 INSERT INTO `pegawai` (`nip`,`no_karpeg`,`no_kartu_askes`,`nama_pegawai`,`tempat_lahir`,`tgl_lahir`,`jenis_kelamin`,`agama`,`golongan_darah`,`status_perkawinan`,`pendidikan_terakhir`,`status_kepegawaian`,`pangkat_golongan_ruang`,`tmt_pangkat`,`no_sk`,`tgl_mulai_kerja`,`pejabat_berwenang`,`unit_kerja`,`kode_bagian_unit_kerja`,`kode_sub_unit_kerja`,`no_ktp`,`alamat_ktp`,`alamat_domisili`,`foto`) VALUES 
- ('195504091977031004','76','89999','Piteng','Jayapura','1980-01-01','Pria','Protestan','B','Belum Kawin','SMA','PNS','I/a - Juru Muda','1980-01-01','ioooo','1980-01-01','','Badan Kepegawaian','BS','SBM','','Pingit RT 2, RW 10/12, Jogjakarta, Indonesia','','Foto022.jpg'),
- ('195511281979031005','','','Ela','Subang','1980-01-01','Wanita','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BPP','SBM','','Pulutan RT 67 Rogoitan Pendowoharjo Sewon Bantul','Bantul','IMG0068A.jpg'),
- ('195602011980011002','12344','5678899','SUBIYANTI','Kasihan Bantul','1980-01-01','Wanita','Islam','AB','Kawin','S-1','PNS','I/a - Juru Muda','1980-01-01','','1980-01-01','Risman','Badan Kepegawaian','BPP','SBKA','','KECAMATAN KASIHAN','','IMG0125A.jpg'),
- ('195607121977031005','','','Eko','Denpasar','1980-01-01','Pria','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BS','SBM','','Kemiri Gadingsari Sanden Bantul','Bantul','hy5.jpg'),
- ('196009272006041004','58','76','SUADI','Bantul','1980-01-01','Pria','Budha','B','Belum Kawin','S-2','PNS','IV/a - Pembina','1980-01-01','023/BKD/1990','1980-01-01','Isak','Badan Kepegawaian','BPP','SBKA','1349','Kasihan Bantul','Bantul','IMG0065A.jpg');
+ ('195504091974589704','762','89999','Piteng','Jayapura','1980-01-01','Pria','Protestan','B','Belum Kawin','SMA','PNS','I/a - Juru Muda','1980-01-01','ioooo','1980-01-01','','Badan Kepegawaian','BS','SBM','3.333/45','Pingit RT 2, RW 10/12, Jogjakarta, Indonesia','Bantul','IMG0125A.jpg'),
+ ('195511281979031005','678','234678','Ela','Subang','1980-01-01','Wanita','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','Drs.Luky, M.Hum','Badan Kepegawaian','BPP','SBM','','Pulutan RT 67 Rogoitan Pendowoharjo Sewon Bantul','Bantul','PICT0055.JPG'),
+ ('195602011980011002','12344','5678899','SUBIYANTI','Kasihan Bantul','1980-01-01','Wanita','Protestan','B','Kawin','S-1','PNS','I/a - Juru Muda','1980-01-01','','1980-01-01','Risman','Badan Kepegawaian','BPP','SBKA','3.456/2678','KECAMATAN KASIHAN','Bantul','PICT0048.JPG'),
+ ('195607121977031005','67890','','Eko','Denpasar','1980-01-01','Pria','Islam','A','Belum Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BS','SBM','','Kemiri Gadingsari Sanden Bantul','Bantul','New Image.JPG'),
+ ('196009272006041004','58','76','SUADI','Bantul','1980-01-01','Pria','Budha','B','Belum Kawin','S-2','PNS','IV/a - Pembina','1980-01-01','023/BKD/1990','1980-01-01','Isak','Badan Kepegawaian','BPP','SBKA','1349','Kasihan Bantul','Bantul','PICT0093.JPG'),
+ ('197203042006042014','','','SRI WAHYUNINGSIH, S.Pd.','Sleman','1980-01-01','Wanita','Katholik','O','Janda','SD','PNS','I/a - Juru Muda','1980-01-01','03/V/BKD/1993','1980-01-01','Dra.Sarah','Badan Kepegawaian','BS','SBP','1234','Sleman','Bantul','PICT0047.JPG'),
+ ('986579953388532280','33','6.678','Susan,SPd','Banguntapan','1980-01-01','Wanita','Islam','A','Belum Kawin','SD','PNS','I/a - Juru Muda','1980-01-01','','1980-01-01','','Badan Kepegawaian','BPPL','SBU','887/567','Kasihan Bantul','Bantul',''),
+ ('987655433355671245','2345','890','Pius','Pingit Yogyakarta','1980-01-01','Pria','Islam','O','Kawin','SD','CPNS','I/a - Juru Muda','1980-01-01','020/BKD/1990','1980-01-01','Dedy, Spd','Badan Kepegawaian','BMP','SBP','1234','Pingit JT I/251','Pingit','images4.jpeg');
 /*!40000 ALTER TABLE `pegawai` ENABLE KEYS */;
 
 
@@ -385,7 +420,7 @@ CREATE TABLE `pendidikan` (
   KEY `FK_Nip` (`nip`),
   KEY `pendidikan_ibfk_1` (`nip`),
   CONSTRAINT `pendidikan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pendidikan`
@@ -395,13 +430,23 @@ CREATE TABLE `pendidikan` (
 INSERT INTO `pendidikan` (`idpendidikan`,`nip`,`jenjang_pendidikan`,`nama_pendidikan`,`fakultas`,`jurusan`,`no_ijazah_sttb`,`tgl_ijazah_sttb`) VALUES 
  (1,'195607121977031005','SD','kkk','k','k','k','1980-01-01'),
  (2,'195607121977031005','SMP','11','1','11','11','1980-01-01'),
- (3,'195504091977031004','SD','SD INPOL','-','-','12/JYW/DEP/2006','1980-01-01'),
- (4,'195504091977031004','SMP','SMP N Kiwirok','-','-','05/SMPR/JWY/2009','1980-01-01'),
- (5,'195504091977031004','SMA','SMA Teruna Bakti','IPS','IPS','06/Jpr/2011','1980-01-01'),
+ (3,'195504091974589704','SD','SD INPOL','-','-','12/JYW/DEP/2006','1980-01-01'),
+ (4,'195504091974589704','SMP','SMP N Kiwirok','-','-','05/SMPR/JWY/2009','1980-01-01'),
+ (5,'195504091974589704','SMA','SMA Teruna Bakti','IPS','IPS','06/Jpr/2011','1980-01-01'),
  (6,'195511281979031005','SD','SD Subang','-','-','12/JYW/DEP/2006','1980-01-01'),
  (7,'195511281979031005','SMP','SMP N  2  Subang','-','-','05/SMPR/JWY/2009','1980-01-01'),
  (8,'195511281979031005','SMA','SMA  1 Subang','IPS','IPS','05/SMMA/JWY/2009','1980-01-01'),
- (9,'195511281979031005','D-III','STIKES','Keperawatan','Kebidanan','06/STIKES/2011','1980-01-01');
+ (9,'195511281979031005','D-III','STIKES','Keperawatan','Kebidanan','06/STIKES/2011','1980-01-01'),
+ (10,'195602011980011002','SD','SD Negeri 1 Bantul','','','','1980-01-01'),
+ (11,'195602011980011002','SMP','SMP N 3 Bantul','','','','1980-01-01'),
+ (12,'195602011980011002','SMA','SiMA N 2 Yogyakarta','IPA','Biologi','','1980-01-01'),
+ (13,'987655433355671245','SD','SD N 2  Semarang','','','','1980-01-01'),
+ (14,'987655433355671245','SMP','SLTP N 3 Semarang','','','','1980-01-01'),
+ (15,'987655433355671245','SMA','SMA  N 3 Solo','IPA','IPA Biologi','','1980-01-01'),
+ (16,'987655433355671245','S-1','UNDIP Semarang','Teknik','Teknik Informatika','','1980-01-01'),
+ (17,'196009272006041004','SD','Suka Maju','','','','1980-01-01'),
+ (18,'196009272006041004','SMP','SMP N 3 Bantul','','','','1980-01-01'),
+ (19,'196009272006041004','SMA','SMA N 3 Banguntapan Bantul','IPS','Ekonomi','','1980-01-01');
 /*!40000 ALTER TABLE `pendidikan` ENABLE KEYS */;
 
 
@@ -419,7 +464,7 @@ CREATE TABLE `pensiun` (
   PRIMARY KEY (`idpensiun`) USING BTREE,
   KEY `pensiun_ibfk_1` (`nip`),
   CONSTRAINT `pensiun_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `pensiun`
@@ -428,8 +473,10 @@ CREATE TABLE `pensiun` (
 /*!40000 ALTER TABLE `pensiun` DISABLE KEYS */;
 INSERT INTO `pensiun` (`nip`,`sk_pensiun`,`tmt_pensiun`,`alasan_pensiun`,`idpensiun`) VALUES 
  ('195607121977031005','3','1980-01-01','3',1),
- ('195504091977031004','12/V/BKD/2012','1980-01-01','22',2),
- ('195511281979031005','12/V/BKD/2012','2012-08-02','Usia',3);
+ ('195504091974589704','12/V/BKD/2012','1980-01-01','22',2),
+ ('195511281979031005','12/V/BKD/2012','2012-08-02','Usia',3),
+ ('195602011980011002','01/PNSNON/V/2010','2010-12-02','Usia',4),
+ ('196009272006041004','12345','1980-01-02','Usia',5);
 /*!40000 ALTER TABLE `pensiun` ENABLE KEYS */;
 
 
@@ -451,7 +498,7 @@ CREATE TABLE `prajabatan` (
   KEY `FK_Nip` (`nip`),
   KEY `prajabatan_ibfk_1` (`nip`),
   CONSTRAINT `prajabatan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `prajabatan`
@@ -461,10 +508,15 @@ CREATE TABLE `prajabatan` (
 INSERT INTO `prajabatan` (`idprajabatan`,`nip`,`jenis_prajabatan`,`tempat`,`penyelenggara`,`tgl_pelaksanaan`,`no_sttpl`,`tgl_sttpl`) VALUES 
  (1,'195607121977031005','Diklat Prajabatan Golongan I','iii','ii','1980-01-01','oo','1980-01-01'),
  (2,'195607121977031005','Diklat Prajabatan Golongan II','222','22','1980-01-01','22','1980-01-01'),
- (3,'195504091977031004','Diklat Prajabatan Golongan I','Jogja','UGM','1980-01-01','01/VI/2012','1980-01-01'),
- (4,'195504091977031004','Diklat Prajabatan Golongan II','Diklat Bantul','Kepegawaian','1980-01-01','02/BKD/2012','1980-01-01'),
- (5,'195504091977031004','Diklat Prajabatan Golongan III','Diklat Bantul','Kepegawaian','1980-01-01','03/XI/2022','1980-01-01'),
- (6,'195511281979031005','Diklat Prajabatan Golongan I','Balai Pelatihan Diklat Jogja','BKD Bantul','1980-01-01','907/BKD/1980','1980-01-01');
+ (3,'195504091974589704','Diklat Prajabatan Golongan I','Jogja','UGM','1980-01-01','01/VI/2012','1980-01-01'),
+ (4,'195504091974589704','Diklat Prajabatan Golongan II','Diklat Bantul','Kepegawaian','1980-01-01','02/BKD/2012','1980-01-01'),
+ (5,'195504091974589704','Diklat Prajabatan Golongan III','Diklat Bantul','Kepegawaian','1980-01-01','03/XI/2022','1980-01-01'),
+ (6,'195511281979031005','Diklat Prajabatan Golongan I','Balai Pelatihan Diklat Jogja','BKD Bantul','1980-01-01','907/BKD/1980','1980-01-01'),
+ (7,'987655433355671245','Diklat Prajabatan Golongan I','BPLK Bantul','BKD Bantul','1980-01-01','01/PDBPLK/BKD/II/2005','2005-02-04'),
+ (8,'987655433355671245','Diklat Prajabatan Golongan II','Balai Diklat Yogyakarta','BKD Provinsi DIY','1980-01-01','02/PDBPLK/BKD/II/2008','1980-01-01'),
+ (9,'195602011980011002','Diklat Prajabatan Golongan I','BKD Bantul','Pemda DIY','1980-01-01','','1980-01-01'),
+ (10,'196009272006041004','Diklat Prajabatan Golongan I','Balai Diklat Bantul','PEMDA DIY','1980-01-01','','1980-01-01'),
+ (11,'196009272006041004','Diklat Prajabatan Golongan II','Balai Diklat Provinsi DIY','','1980-01-01','','1980-01-01');
 /*!40000 ALTER TABLE `prajabatan` ENABLE KEYS */;
 
 
@@ -487,7 +539,7 @@ CREATE TABLE `suami_istri` (
   KEY `FK_Idsuami_sitri` (`nip`),
   KEY `suami_istri_ibfk_1` (`nip`),
   CONSTRAINT `suami_istri_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `suami_istri`
@@ -495,9 +547,12 @@ CREATE TABLE `suami_istri` (
 
 /*!40000 ALTER TABLE `suami_istri` DISABLE KEYS */;
 INSERT INTO `suami_istri` (`idsuami_istri`,`nip`,`nama_suami_istri`,`tempat_lahir`,`tgl_lahir`,`status_suami_istri`,`pekerjaan`,`status_tunjangan`,`tgl_menikah`) VALUES 
- (6,'195607121977031005','Ela','Subang','1975-02-02','Istri','Non PNS','Dapat','1980-01-01'),
- (7,'195511281979031005','Eko','Subang','1980-01-01','Suami','Non PNS','Dapat','1978-07-04'),
- (8,'195504091977031004','Nela','Kasihan Bantul','1979-11-05','Istri','Non PNS','Dapat','1990-01-01');
+ (1,'195607121977031005','Ela','Subang','1975-02-02','Istri','Non PNS','Dapat','1980-01-01'),
+ (2,'195511281979031005','Eko','Subang','1980-01-01','Suami','Non PNS','Dapat','1978-07-04'),
+ (3,'195504091974589704','Nela','Kasihan Bantul','1979-11-05','Istri','Non PNS','Dapat','1990-01-01'),
+ (4,'196009272006041004','Sumi','Bandung','1980-01-01','Istri','Non PNS','Dapat','1990-01-08'),
+ (5,'195602011980011002','Drs.Bandi','Kupang','1980-01-02','Suami','Non PNS','Dapat','2000-01-01'),
+ (6,'987655433355671245','Yakobus','Semarang','1970-01-01','Suami','Non PNS','Dapat','1988-01-01');
 /*!40000 ALTER TABLE `suami_istri` ENABLE KEYS */;
 
 
@@ -551,9 +606,9 @@ CREATE TABLE `user_account` (
 
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
 INSERT INTO `user_account` (`nip`,`name`,`password`,`email`,`role`,`username`) VALUES 
- ('195504091977031004','piteng','101','','Administrator','piteng'),
- ('195511281979031005','ela','102','ela@yahoo.com','Pegawai','ela'),
- ('195602011980011002','subiyanti','subiyanti','suby@gmail.com','Pegawai','subiyanti'),
+ ('195504091974589704','piteng','101','','Administrator','piteng'),
+ ('195511281979031005','ela','ela','ela@yahoo.com','Pegawai','ela'),
+ ('195602011980011002','subiyanti','103','suby@gmail.com','Pegawai','subiyanti'),
  ('195607121977031005','eko','oke','eko','Pegawai','oke');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 
