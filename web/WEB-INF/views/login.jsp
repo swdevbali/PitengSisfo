@@ -1,13 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*,recite18th.library.Db,application.config.Config,recite18th.library.Pagination" %>
 <style type="text/css">
 <!--
-.style4 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	color: #339900;
-}
 body,td,th {
-	color: #FFFFFF;
+	color: #0000FF;
+	font-weight: bold;
 }
 body {
 	background-image: url();
@@ -18,49 +14,65 @@ body {
 	font-size: 36px;
 	color: #0000FF;
 }
-.style26 {font-family: Verdana, Arial, Helvetica, sans-serif}
-.style27 {
-	color: #0000FF;
-	font-size: 14px;
-	font-style: italic;
-}
 .style28 {
 	font-size: 14px;
 	color: #0000CC;
 	font-style: italic;
 }
+.style33 {
+	color: #0000FF;
+	font-size: 24px;
+	font-style: italic;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.style34 {font-size: 18px}
+.style41 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #006699;
+}
+.style46 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-style: italic;
+	color: #0000FF;
+}
 -->
 </style>
-<p align="center" class="style23"><marquee><span class="style26">SELAMAT DATANG DI SISTEM INFORMASI BADAN KEPEGAWAIAN DAERAH BANTUL</span></marquee></h1>
-<br />
-<table width="45%" height="35
-0" border="0" align="center" bgcolor="#99FFFF">
-  <tr>
-  <td width="582" height="20" valign="top" bgcolor="#FFFFFF" ><marquee>
-  </marquee>      <span class="style27">Silahkan Masukkan Usrname dan Password </span><span class="style28">Anda</span></td>
+<p align="center" class="style23"><marquee class="style28 style34">
+<span class="style28">SELAMAT DATANG DI SISTEM INFORMASI BADAN KEPEGAWAIAN DAERAH BANTUL</span>
+</marquee>
+  
+  <span class="style33">
+  </h1>
   <br />
-  	<br />
+  </span>
+<table width="43%" height="30
+0" border="1" align="center" cellpadding="1" cellspacing="1" bordercolor="#FF9900" background="../../upload/images1.jpeg" bgcolor="">
+  <tr>
+  <td height="20" colspan="2" valign="top" ><marquee>
+  </marquee><div align="center" class="style41"><em>Silahkan Masukkan Usrname dan Password </em><em>Anda</em></div>
+  </br /></td>
+  <br />
   </tr>
-   <td width="500" height="127" align="center" valign="top" bordercolor="#000000" ><form action="<%=Config.base_url%>index/login/doLogin" method="post">
+   <td width="389" height="127" align="center" valign="top" bordercolor="#000000" >
+   <form action="<%=Config.base_url%>index/login/doLogin" method="post">
         <div align="center"><br/>
-          <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+          <table width="72%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFF22" background="../../upload/images1.jpeg">
             <tr>
-              <td><table width="100%" border="0">
+              <td><table width="71%" border="0" align="center" bordercolor="#FFFFFF" background="../../upload/images1.jpeg" bgcolor="#CC9900">
                 <tr>
                   <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
+                  <td colspan="2" rowspan="2">&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td width="15%">&nbsp;</td>
-                  <td width="15%"><span class="style21">Username</span></td>
+                  <td width="15%"><span class="style41">Username</span></td>
                   <td width="51%"><span class="style11"><span class="style21">
                     <input type="text" id="username" name="username"/>
                   </span></span></td>
@@ -68,7 +80,7 @@ body {
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
-                  <td><span class="style21">Password</span></td>
+                  <td><span class="style41">Password</span></td>
                   <td><span class="style11">
                     <input type="password" id="password" name="password"/>
                   </span></td>
@@ -77,21 +89,16 @@ body {
                 <tr>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
-                  <td><span class="style11">
-                    <input name="Submit" type="submit" value="Login"/>
-                    <input name="Reset" type="reset" id="Submit" value="Batal" onclick="javascript:history.back(-1);" />
-                  </span></td>
+                  <td><span class="style16">
+                   <div align="center"> <input name="Submit" type="submit" value="Login"/></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
+                  <td colspan="2" rowspan="2"><div align="center" class="style46">${flash_login_message}</div></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
@@ -99,14 +106,7 @@ body {
             </tr>
           </table>
         </div>
-        <span class="style11"><label></label>
-        </span><span class="style11"><br />
-        </span></form>     </td>
+        <span class="style11"><label></label></span><span class="style11"><br /></span>
+      </form>     </td>
     
 </table>
-<div align="center"><div align="justify"><div align="right"><div align="left"><div align="center"><div align="justify"><blockquote>
-  <p> </p>
-  </p>
-<p>${flash_login_message}</p>
-</blockquote>
-</div></div></div></div></div></div>

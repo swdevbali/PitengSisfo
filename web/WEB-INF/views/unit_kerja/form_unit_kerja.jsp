@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form UnitKerja">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form UnitKerja </th>
+<th colspan="2" class="odd" scope="col">FORM UNIT KERJA </th>
 </tr>
 </thead>
 <tbody>
@@ -15,7 +15,7 @@
 <input name="Idunit_Kerja" type="hidden" id="Idunit_Kerja" value="${model.Idunit_Kerja}"/>
 </tr>
 <tr>
-<td>Nama_Unit_Kerja</td>
+<td><span class="style1">Nama Unit Kerja</span></td>
 <td>
 <input name="Nama_Unit_Kerja" type="text" id="Nama_Unit_Kerja" value="${model.Nama_Unit_Kerja}"/>
 </td>

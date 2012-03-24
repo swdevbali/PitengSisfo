@@ -7,7 +7,7 @@
 <table id="hor-zebra" summary="Form Pendidikan">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form Pendidikan </th>
+<th colspan="2" class="odd" scope="col">FORM PENDIDIKAN</th>
 </tr>
 </thead>
 <tbody>
@@ -16,14 +16,14 @@
 </td>
 </tr>
 <tr>
-<td>nip</td>
+<td><span class="style1">NIP</span></td>
 <td>
 <input name="nip" type="hidden" id="nip" value="${model.nip}"/>
 <input name="label_nip" readonly="true" type="text" id="label_nip" value="${model.nip}"/>
 <a href="<%=Config.base_url%>index/Pegawai/chooseView?height=220&width=700" class="thickbox">Pilih</a></td>
 </tr>
 <tr>
-<td>jenjang_pendidikan</td>
+<td><span class="style1">Jenjang Pendidikan</span></td>
 <td>
 <select name="jenjang_pendidikan" id="jenjang_pendidikan">
 	<option <c:if test="${model.jenjang_pendidikan=='SD'}"> selected="selected" </c:if> value="SD">SD</option>
@@ -40,35 +40,35 @@
 </td>
 </tr>
 <tr>
-<td>nama_pendidikan</td>
+<td><span class="style1">Nama Pendidikan</span></td>
 <td>
 <input name="nama_pendidikan" type="text" id="nama_pendidikan" value="${model.nama_pendidikan}"/>
 ${nama_pendidikan_error}
 </td>
 </tr>
 <tr>
-<td>fakultas</td>
+<td><span class="style1">Fakultas</span></td>
 <td>
 <input name="fakultas" type="text" id="fakultas" value="${model.fakultas}"/>
 ${fakultas_error}
 </td>
 </tr>
 <tr>
-<td>jurusan</td>
+<td><span class="style1">Jurusan</span></td>
 <td>
 <input name="jurusan" type="text" id="jurusan" value="${model.jurusan}"/>
 ${jurusan_error}
 </td>
 </tr>
 <tr>
-<td>no_ijazah_sttb</td>
+<td><span class="style1">No.Ijazah STTB</span></td>
 <td>
 <input name="no_ijazah_sttb" type="text" id="no_ijazah_sttb" value="${model.no_ijazah_sttb}"/>
 ${no_ijazah_sttb_error}
 </td>
 </tr>
 <tr>
-<td>tgl_ijazah_sttb</td>
+<td><span class="style1">Tgl Ijazah STTB</span></td>
 <td>
 <input name="tgl_ijazah_sttb" type="text" id="tgl_ijazah_sttb" value="${model.tgl_ijazah_sttb}"/>
 <script>

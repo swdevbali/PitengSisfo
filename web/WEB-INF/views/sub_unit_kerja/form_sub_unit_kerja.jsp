@@ -7,12 +7,12 @@
 <table id="hor-zebra" summary="Form SubUnitKerja">
 <thead>
 <tr>
-<th colspan="2" class="odd" scope="col">Form SubUnitKerja </th>
+<th colspan="2" class="odd" scope="col">FORM SUB BAGIAN UNIT KERJA </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>kode_sub_unit_kerja</td>
+<td><span class="style1">Kode Sub Bagian Unit Kerja</span></td>
 <td>
 <input name="kode_sub_unit_kerja" type="text" id="kode_sub_unit_kerja" value="${model.kode_sub_unit_kerja}"/>
 ${kode_sub_unit_kerja_error}
@@ -20,14 +20,14 @@ ${kode_sub_unit_kerja_error}
 </td>
 </tr>
 <tr>
-<td>sub_unit_kerja</td>
+<td><span class="style1">Sub Bagian Unit Kerja</span></td>
 <td>
 <input name="sub_unit_kerja" type="text" id="sub_unit_kerja" value="${model.sub_unit_kerja}"/>
 ${sub_unit_kerja_error}
 </td>
 </tr>
 <tr>
-<td>kode_bagian_unit_kerja</td>
+<td><span class="style1">Kode Bagian Unit Kerja</span></td>
 <td>
 <input name="kode_bagian_unit_kerja" type="hidden" id="kode_bagian_unit_kerja" value="${model.kode_bagian_unit_kerja}"/>
 <input name="label_kode_bagian_unit_kerja" readonly="true" type="text" id="label_kode_bagian_unit_kerja" value="${model.kode_bagian_unit_kerja}"/>
