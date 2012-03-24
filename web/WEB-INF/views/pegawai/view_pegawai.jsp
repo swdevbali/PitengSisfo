@@ -20,7 +20,7 @@ DateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
 .style16 {font-size: 14px; font-family: Arial, Helvetica, sans-serif; }
 -->
 </style>
-<c:if test="user_credential.role=='Administrator'">
+<c:if test="${user_credential.role=='Administrator'}">
 <form action="<%=Config.base_url%>index/Pegawai/search" method="post">
   <div align="center">Cari berdasarkan<span class="style4"> 
     <select name="search_criteria">
