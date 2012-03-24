@@ -10,3 +10,8 @@ build/web/META-INF
 dist/
 build/web/*.*
 build/web/upload/*
+/web/upload/_notes
+/Thumbs.db
+/web/Thumbs.db
+/web/images/Thumbs.db
+/web/upload/Thumbs.db
